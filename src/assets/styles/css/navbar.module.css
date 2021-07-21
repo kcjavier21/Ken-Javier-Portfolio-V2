@@ -1,0 +1,11 @@
+.navbar {
+  height: 100px;
+  width: 100vw;
+  background: #101E25;
+  color: #25284F;
+}
+
+.navbar .nav-links {
+  color: white;
+}
+/*# sourceMappingURL=navbar.module.css.map */

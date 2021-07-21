@@ -1,0 +1,63 @@
+@import './mixins';
+@import './variables';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    @include add-testing-border;
+    height: 100px;
+    width: 100vw;
+    //background: #101E25;
+    color: $text-color;
+    
+
+    .nav-links {
+        color: white;
+
+        a {
+            color: white;
+            font-size: 20px;
+        }
+    }
+}
+
+#hero {
+    @include add-testing-border;
+    height: 95vh;
+    //background-color: green;
+}
+
+#about-me{
+    @include add-testing-border;
+    height: 95vh;
+    //background-color: green;
+}
+
+#services {
+    @include add-testing-border;
+    height: 95vh;
+    //background-color: blue;
+}
+
+#projects {
+    @include add-testing-border;
+    height: 95vh;
+    //background-color: blue;
+}
+
+#contact {
+    @include add-testing-border;
+    height: 95vh;
+    //background-color: blue;
+}
+
+
+
+
+
+

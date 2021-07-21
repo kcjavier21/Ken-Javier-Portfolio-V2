@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 100px;
+  width: 100vw;
+  color: #25284F;
+}
+
+.navbar .nav-links {
+  color: white;
+}
+
+.navbar .nav-links a {
+  color: white;
+  font-size: 20px;
+}
+
+#hero {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 95vh;
+}
+
+#about-me {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 95vh;
+}
+
+#services {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 95vh;
+}
+
+#projects {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 95vh;
+}
+
+#contact {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 95vh;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,109 @@
+@mixin add-testing-border() {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+@mixin add-border() {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+@mixin center() {
+    justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@mixin vertically-centered() {
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 200ms;  
+}
+
+@mixin absolutely-centered {
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+@mixin ordering-system-images($width, $left, $marginTop) {
+    //position: absolute;
+    width: $width;
+    left: $left;
+    margin-top: $marginTop;
+}
+
+@mixin twoKHD{
+    @media(min-width: 2160px){
+        @content;
+    }
+}
+
+@mixin fullHD{
+    @media(max-width: 1920px){
+        @content;
+    }
+}
+
+@mixin HD{
+    @media(max-width: 1440px){
+        @content;
+    }
+}
+
+@mixin medium{
+    @media(max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin iPad-pro{
+    @media(min-width: 1030px){
+        @media(min-height: 1360px){
+            @content;
+        }
+    }
+}
+
+@mixin surface-duo {
+    @media(min-width: 530px){
+        @media(max-height: 730px){
+            @content;
+        }
+    }
+}
+
+@mixin tablet{
+    @media(max-width: 820px){
+        @content;
+    }
+}
+
+@mixin small-tablet{
+    @media(max-width: 680px){
+        @content;
+    }
+}
+
+@mixin large-mobile{
+    @media(max-width: 535px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media(max-width: 425px){
+        @content;
+    }
+}
+
+@mixin small-mobile{
+    @media(max-width: 320px){
+        @content;
+    }
+}

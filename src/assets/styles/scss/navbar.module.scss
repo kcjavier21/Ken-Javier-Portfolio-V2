@@ -1,0 +1,14 @@
+@import './mixins';
+@import './variables';
+
+
+.navbar {
+    height: 100px;
+    width: 100vw;
+    background: #101E25;
+    color: $text-color;
+
+    .nav-links {
+        color: white;
+    }
+}
