@@ -1,14 +1,100 @@
 .heroSection {
-  height: 95vh;
+  height: 100vh;
   background-image: url("../../../../../assets/images/jpg-png/background.png");
   background-position: center;
   position: relative;
 }
 
+.heroSection .rightPart {
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  position: absolute;
+  height: 320px;
+  width: 780px;
+  margin-left: 12%;
+  z-index: 1;
+}
+
+.heroSection .rightPart h3 {
+  color: #92D7FB;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.heroSection .rightPart h1 {
+  color: #92D7FB;
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.heroSection .rightPart h1 span {
+  color: #FF986B;
+}
+
+.heroSection .rightPart .socialButtons {
+  margin-top: 24px;
+  width: 264px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.heroSection .rightPart .socialButtons a {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-right: 20px;
+}
+
+.heroSection .rightPart .socialButtons a img {
+  height: 48px;
+}
+
+.heroSection .rightPart .buttonContainer {
+  margin-top: 36px;
+  height: 48px;
+}
+
+.heroSection .rightPart .buttonContainer button {
+  height: 48px;
+  width: 162px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.heroSection .rightPart .buttonContainer .seeMyWork {
+  background: #FF986B;
+  color: black;
+}
+
+.heroSection .rightPart .buttonContainer .getMyResume {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-color: #FF986B;
+  border-width: 3px;
+  background: #0F0F0F;
+  color: #FF986B;
+}
+
 .heroSection .heroImage {
-  height: 85vh;
+  height: 90vh;
   position: absolute;
   bottom: 0px;
-  right: 10%;
+  right: 8%;
 }
 /*# sourceMappingURL=hero.module.css.map */

@@ -3,16 +3,97 @@
 
 
 .heroSection {
-    height: 95vh;
+    height: 100vh;
     background-image: url("../../../../../assets/images/jpg-png/background.png");
     background-position: center;
     position: relative;
 
+    .rightPart {
+        @include vertically-centered;
+        //@include add-testing-border;
+        position: absolute;
+        height: 320px;
+        width: 780px;
+        margin-left: 12%;
+        z-index: 1;
+        
+
+        h3 { 
+            //@include add-testing-border;
+            color: $light-blue;
+            font-size: 36px;
+            font-family: $secondary-font;
+            //letter-spacing: 0.12em;
+            font-weight: 500;
+        }
+
+        h1 {
+            //@include add-testing-border;
+            color: $light-blue;
+            font-family: $secondary-font;
+            font-size: 64px;
+            font-weight: 500;
+            //letter-spacing: 0.12em;
+
+            span {
+                color: $orange;
+            }
+        }
+
+        .socialButtons {
+            //@include add-testing-border;
+            margin-top: 24px;
+            width: 264px;
+            display: flex;
+            flex-direction: row;
+
+            a {
+                @include add-testing-border;
+                margin-right: 20px;
+
+                img {
+                    height: 48px;
+                }
+            }
+        }
+
+        .buttonContainer {
+            //@include add-testing-border;
+            margin-top: 36px;
+            //width: 380px;
+            height: 48px;
+
+            button {
+                height: 48px;
+                width: 162px;
+                font-family: $secondary-font;
+                font-size: 16px;
+                font-weight: 600;
+                margin-right: 16px;
+                border-radius: 10px;
+                border:none;
+            }
+
+            .seeMyWork {
+                background: $orange;
+                color: black;
+            }
+
+            .getMyResume { 
+                @include add-border;
+                border-color: $orange;
+                border-width: 3px;
+                background: #0F0F0F;
+                color: $orange;
+            }
+        }
+    }
+
     .heroImage {
         //@include add-testing-border;
-        height: 85vh;
+        height: 90vh;
         position: absolute;
         bottom: 0px;
-        right: 10%;
+        right: 8%;
     }
 }
