@@ -1,0 +1,18 @@
+@import '../../../../../assets/styles/scss/mixins';
+@import '../../../../../assets/styles/scss/variables';
+
+
+.heroSection {
+    height: 95vh;
+    background-image: url("../../../../../assets/images/jpg-png/background.png");
+    background-position: center;
+    position: relative;
+
+    .heroImage {
+        //@include add-testing-border;
+        height: 85vh;
+        position: absolute;
+        bottom: 0px;
+        right: 10%;
+    }
+}

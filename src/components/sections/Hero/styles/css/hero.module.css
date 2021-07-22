@@ -1,0 +1,14 @@
+.heroSection {
+  height: 95vh;
+  background-image: url("../../../../../assets/images/jpg-png/background.png");
+  background-position: center;
+  position: relative;
+}
+
+.heroSection .heroImage {
+  height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  right: 10%;
+}
+/*# sourceMappingURL=hero.module.css.map */

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Projects = () => {
+const Services = () => {
     return (
         <div>
-            <h1>Projects Section</h1>
+            <h1>Services Section</h1>
         </div>
     )
 }
 
-export default Projects
+export default Services
