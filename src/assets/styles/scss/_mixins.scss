@@ -70,9 +70,7 @@
 
 @mixin iPad-pro-12{
     @media(max-width: 1030px){
-        @media(min-height: 1360px){
             @content;
-        }
     }
 }
 
@@ -127,5 +125,13 @@
 @mixin small-mobile{
     @media(max-width: 320px){
         @content;
+    }
+}
+
+@mixin galaxy-fold{
+    @media(max-width: 285px){
+        @media(max-height: 655px) {
+            @content;
+        }
     }
 }

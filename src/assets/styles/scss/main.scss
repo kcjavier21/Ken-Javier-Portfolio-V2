@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5 {
     width: 100vw;
     //background: #101E25;
     color: $text-color;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
 
     @include iMac {
@@ -117,6 +117,7 @@ h1, h2, h3, h4, h5 {
                 @include medium {
                     font-size: 14px;
                     width: 82px;
+                    margin: 0 0px 0 12px;
                 } 
             }
         }

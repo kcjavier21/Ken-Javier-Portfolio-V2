@@ -3,19 +3,171 @@
 
 
 .heroSection {
+    //@include add-testing-border;
     height: 100vh;
     background-image: url("../../../../../assets/images/jpg-png/background.png");
     background-position: center;
     position: relative;
+    overflow: hidden;
 
-    .rightPart {
+    .shade {
+        ////@include add-testing-border;
+        width: 100vw;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+
+        @include medium {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        @include large-mobile {
+            background: rgba(0, 0, 0, 0.55);
+        }
+    }
+
+    .heroImage {
+        //@include add-testing-border;
+        height: 90vh;
+        position: absolute;
+        bottom: 0px;
+        right: 8%;
+
+        @include HD {
+            right: 1%;
+        }
+
+     
+
+        @include iMac {
+            @media(max-height: 725px) {
+                right: 2%;
+            }
+        }
+
+
+        @include iPad-pro-12 {
+            right: 3%;
+
+            @media(min-height: 850px) {
+                right: -8%;
+           }
+
+            @media(min-height: 1360px) {
+                right: -20%;
+           }
+        }
+
+        @include iPad-pro-11 {
+            right: -16%;
+            height: 92vh;
+        }
+
+        @include iPad-mini {
+            right: -20%;
+        }
+
+        @include small-tablet {
+            right: -16%;
+        }
+
+        @include large-mobile {
+            //right: -10vh;
+            height: auto;
+            right: -34vw;
+            //height: auto;
+            width: 144vw;
+            //height: 92vh;
+
+
+
+            @media(max-height: 840px) {
+                height: auto;
+                right: -30vw;
+                //height: auto;
+                width: 136vw;
+            }
+
+            @media(max-height: 780px) {
+                height: auto;
+                right: -10vw;
+                //height: auto;
+                width: 100vw;
+            }
+
+            @media(max-height: 740px) {
+                height: auto;
+                right: -20vw;
+                //height: auto;
+                width: 116vw;
+            }
+
+
+        }
+
+        @include galaxy-fold {
+            height: auto;
+            right: -44vw;
+            //height: auto;
+            width: 152vw;
+        }
+
+
+        // @include mobile {
+        //     right: -12vh;
+        //     //height: auto;
+        //     //width: 136vw;
+        //     height: 94vh;
+        // }
+
+    }
+
+
+    .leftPart {
         @include vertically-centered;
         //@include add-testing-border;
         position: absolute;
-        height: 320px;
+        height: auto;
         width: 780px;
-        margin-left: 12%;
-        z-index: 1;
+        left: 12%;
+        z-index: 2 !important;
+
+        max-width: 85vw;
+
+        @include HD {
+            left: 8%;
+        }
+
+        @include iMac {
+            left: 10%;
+        }
+
+        @include medium {
+            left: 12%;
+            // margin: 0 auto;
+            // top: 50%;
+            transform: translateY(-30%);
+        }
+
+
+        @include iPad-pro-11 {
+            left: 10%;
+        }
+
+        @include large-mobile {
+            transform: translateY(0);
+            @include absolutely-centered;
+            height: 280px;
+            bottom: 10vh;
+        }
+
+        @include mobile {
+            @include absolutely-centered;
+            height: 216px;
+            bottom: 10vh;
+        }
+
+       
         
 
         h3 { 
@@ -25,6 +177,34 @@
             font-family: $secondary-font;
             //letter-spacing: 0.12em;
             font-weight: 500;
+
+            @include iMac {
+                font-size: 32px;
+            }
+
+            @include iPad-pro-11 {
+                font-size: 28px;
+            }
+
+            @include iPad-mini {
+                font-size: 26px;
+            }
+
+            @include small-tablet {
+                font-size: 24px;
+            }
+
+            @include large-mobile {
+                font-size: 20px;
+            }
+
+            @include mobile {
+                font-size: 4vw;
+            }
+
+            @include surface-duo {
+                font-size: 18px;
+            }
         }
 
         h1 {
@@ -34,6 +214,34 @@
             font-size: 64px;
             font-weight: 500;
             //letter-spacing: 0.12em;
+
+            @include iMac {
+                font-size: 56px;
+            }
+
+            @include iPad-pro-11 {
+                font-size: 52px;
+            }
+
+            @include iPad-mini {
+                font-size: 48px;
+            }
+
+            @include small-tablet {
+                font-size: 40px;
+            }
+
+            @include large-mobile {
+                font-size: 42px;
+            }
+
+            @include surface-duo {
+                font-size: 36px;
+            }
+
+            @include mobile {
+                font-size: 8.6vw;
+            }
 
             span {
                 color: $orange;
@@ -47,12 +255,48 @@
             display: flex;
             flex-direction: row;
 
+            @include large-mobile {
+                margin: 30px auto 0 auto;
+                justify-content: center;
+                width: auto;
+            }
+            
+
             a {
-                @include add-testing-border;
+                //@include add-testing-border;
                 margin-right: 20px;
+                display: block;
+                margin: 0 auto;
+
+                @include large-mobile {
+                    margin: 0 10px;
+                    padding: 0;
+                }
+
+                @include surface-duo {
+                    margin: 0 16px 0 0;
+                }
+
+                @include galaxy-fold {
+                    margin: 0 8px;
+                }
 
                 img {
                     height: 48px;
+
+                    @include iPad-pro-11 {
+                        height: 42px;
+                    }
+
+                    @include large-mobile {
+                        height: 36px;
+                    }
+
+                    @include galaxy-fold {
+                        height: 32px;
+                    }
+
+                    
                 }
             }
         }
@@ -63,15 +307,54 @@
             //width: 380px;
             height: 48px;
 
+            @include iMac {
+                font-size: 30px;
+            }
+
+            @include iPad-pro-11 {
+                margin-top: 20px;
+            }
+
+            @include large-mobile {
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+
             button {
                 height: 48px;
-                width: 162px;
+                width: 180px;
                 font-family: $secondary-font;
                 font-size: 16px;
                 font-weight: 600;
                 margin-right: 16px;
                 border-radius: 10px;
                 border:none;
+
+                @include medium {
+                    height: 36px;
+                    width: 140px;
+                }
+
+                @include iPad-pro-11 {
+                    font-size: 14px;
+                }
+
+                @include large-mobile {
+                    margin: 0 6px;
+                }
+
+                @include mobile {
+                    width: 40%;
+                    height: 9.2vw;
+                    font-size: 3.2vw;
+                    border-radius: 8px;
+                    border-width: 2;
+                }
+
+                @include surface-duo {
+                    font-size: 12px;
+                }
             }
 
             .seeMyWork {
@@ -85,15 +368,11 @@
                 border-width: 3px;
                 background: #0F0F0F;
                 color: $orange;
+
+                @include iPad-pro-11 {
+                    border-width: 2px;
+                }
             }
         }
-    }
-
-    .heroImage {
-        //@include add-testing-border;
-        height: 90vh;
-        position: absolute;
-        bottom: 0px;
-        right: 8%;
-    }
+    }  
 }
