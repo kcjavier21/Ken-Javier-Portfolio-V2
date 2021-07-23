@@ -92,7 +92,7 @@
 
 @mixin surface-duo {
     @media(min-width: 530px){
-        @media(max-height: 730px){
+        @media(max-height: 730px){ 
             @content;
         }
     }

@@ -16,10 +16,14 @@ h1, h2, h3, h4, h5 {
     //@include add-testing-border;
     height: 80px;
     width: 100vw;
-    //background: #101E25;
     color: $text-color;
     z-index: 5;
     position: fixed;
+    transition: 300ms ease-in-out;
+
+    &.active {
+        background: #101E25;
+    }
 
     @include iMac {
         height: 70px;
@@ -215,7 +219,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #about{
-    @include add-testing-border;
+    //@include add-testing-border;
     min-height: 95vh;
 }
 

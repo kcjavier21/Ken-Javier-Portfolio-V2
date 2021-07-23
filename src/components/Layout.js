@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 const Layout = (props) => {
     return (
         <>
-            <Navbar/>
+            <Navbar innerWidth={props.innerWidth} />
             { props.children }
             <Footer/>
         </>

@@ -1,0 +1,135 @@
+@import '../../../../../assets/styles/scss/mixins';
+@import '../../../../../assets/styles/scss/variables';
+
+.about {
+    //@include add-testing-border;
+    height: 95vh;
+    background: $blue;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    @include large-mobile {
+        height: 100vh;
+    }
+
+    @include mobile {
+        @media(max-height: 670px) {
+            height: 132vh;
+        }
+    }
+
+    @include small-mobile {
+        height: 132vh;
+    }
+}
+
+
+    .writing {
+        //@include add-testing-border;
+        @include absolutely-centered;
+        @include vertically-centered;
+        //height: 420px;
+        width: 950px;
+        max-width: 80%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 2vw;
+
+        @include iPad-pro-11 {
+            grid-template-columns: 265px 2fr;
+            max-width: 88%;
+        }
+
+        @include iPad-mini{
+            grid-template-columns: auto;
+            grid-template-rows: auto 1.2fr;
+            max-width: 76%;
+        }
+
+
+        .imageSection {
+            height: 417px;
+            width: 100%;
+            //@include add-testing-border;
+
+            @include iPad-mini{
+                width: 240px;
+                height: 100%;
+                margin: 0 auto;
+
+                max-width: 84%;
+            }
+
+            @include small-mobile {
+                width: 200px;
+            }
+            
+            h1 {
+                //@include add-testing-border;
+                font-family: $main-font;
+                font-size: 36px;
+                color: $orange;
+                margin-top: 3%;
+                text-align: center;
+
+                @include large-mobile {
+                    font-size: 28px;
+                    margin-bottom: 8px;
+                }
+
+                @include mobile {
+                    font-size: 24px;
+                }
+            }
+
+            .myImage {
+                height: 100%;
+            }
+
+
+
+            
+        }
+
+        .paragraphSection {
+            text-align: left;
+
+            h1 {
+                //@include add-testing-border;
+                font-family: $main-font;
+                font-size: 36px;
+                color: $orange;
+                margin-top: 3%;
+            }
+
+            p {
+                //@include add-testing-border;
+                font-family: $secondary-font;
+                color: #FFFF;
+                margin-top: 5%;
+                line-height: 1.6em;
+
+                @include medium {
+                    @media(max-height: 750px) {
+                        font-size: 14px;
+                    }
+                }
+
+                @include iPad-pro-11 {
+                   font-size: 14px;
+                   margin-top: 64px;
+                }
+
+                @include mobile {
+                    font-size: 12px;
+                }
+
+                @include small-mobile {
+                    font-size: 11px;
+                }
+            }
+        }
+    
+}

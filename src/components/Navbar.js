@@ -8,8 +8,8 @@ import '../assets/styles/css/all.min.css';
 import '../assets/styles/css/fontawesome.min.css';
 
 
-const Navbar = () => {
-    let [innerWidth, setInnerWidth] = useState(768);
+const Navbar = (props) => {
+    //let [innerWidth, setInnerWidth] = useState(768);
     let [scrollPosition, setScrollPosition] = useState(0);
     let [toggleNavbarIsActive, setToggleNavbarIsActive] = useState(false);
     let [burgerMenuIsActive, setBurgerMenuIsActive] = useState(false);
@@ -17,26 +17,15 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', getScrollPosition);
-
-        window.addEventListener('load', getInnerWidth);
-        window.addEventListener('mouseover', getInnerWidth);
-        window.addEventListener('resize', getInnerWidth);
+        window.addEventListener('click', getScrollPosition);
 
         return () => {
             window.removeEventListener('scroll', getScrollPosition);
-            window.removeEventListener('resize', getInnerWidth);
-
-            window.removeEventListener('load', getInnerWidth);
-            window.removeEventListener('mouseover', getInnerWidth);
-            window.removeEventListener('resize', getInnerWidth);
+            window.removeEventListener('click', getScrollPosition);
         }
+
     }, []);
     
-    // ==== Determines the width of the website ====
-    const getInnerWidth = () => {
-        setInnerWidth(window.innerWidth);
-    };
-
     // ==== Determines the position of scroll bar ====
     const getScrollPosition = () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -61,6 +50,7 @@ const Navbar = () => {
     const generateToggleNavbar = () => {
         let style = toggleNavbarIsActive ? 'active' : '';
 
+
         // console.log("SCROLL POSITION: " + scrollPosition.toFixed(4));
 
         return <div className={`sidebar ${style}`}>
@@ -76,12 +66,14 @@ const Navbar = () => {
 
 
     const generateNavbar = () => {
-        return <nav className="navbar">
+        let activeStyle = scrollPosition > 0.15 ? 'active' : '';
+
+        return <nav className={`navbar ${activeStyle}`}>
                     <div className="nav-contents">
                     <img src={logo} alt="Ken Javier's Logo"/>
 
                     <ul className="nav-links">
-                        { innerWidth > 768 ? navData.map((item) => 
+                        { props.innerWidth > 768 ? navData.map((item) => 
                             <li role="presentation" key={item} onClick={() => scrollTo(`#${item}`)} onKeyDown={handleClick}>{item}</li>) 
                             : <i role="presentation" onKeyDown={handleClick} onClick={() => getToggleNavbarClass()} className={`fas fa-bars ${burgerMenuClass}`}/> }
                     </ul>
@@ -96,10 +88,12 @@ const Navbar = () => {
         <div>
             { generateNavbar() }
 
-            { innerWidth <= 768 ? generateToggleNavbar() : <></> }
+            { props.innerWidth <= 768 ? generateToggleNavbar() : <></> }
 
         </div>
     )
 }
 
-export default Navbar
+
+export default Navbar;
+
