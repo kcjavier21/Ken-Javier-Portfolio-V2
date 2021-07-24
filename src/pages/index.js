@@ -18,12 +18,12 @@ export default function Home() {
 
     useEffect(() => {
         window.addEventListener('load', getInnerWidth);
-        window.addEventListener('click', getInnerWidth);
+        window.addEventListener('mouseover', getInnerWidth);
         window.addEventListener('resize', getInnerWidth);
 
         return () => {
             window.removeEventListener('load', getInnerWidth);
-            window.removeEventListener('click', getInnerWidth);
+            window.removeEventListener('mouseover', getInnerWidth);
             window.removeEventListener('resize', getInnerWidth);
         }
     }, []);

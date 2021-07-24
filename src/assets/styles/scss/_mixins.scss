@@ -4,10 +4,11 @@
     border-color: rgb(255, 255, 255);
 }
 
-@mixin add-border() {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
+@mixin add-border($type, $width, $color, $radius) {
+    border-style: $type;
+    border-width: $width;
+    border-color: $color;
+    border-radius: $radius;
 }
 
 @mixin center() {

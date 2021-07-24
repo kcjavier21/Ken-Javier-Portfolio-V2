@@ -265,14 +265,6 @@ h1, h2, h3, h4, h5 {
   color: #FF986B;
 }
 
-#home {
-  min-height: 95vh;
-}
-
-#about {
-  min-height: 95vh;
-}
-
 #services {
   border-style: solid;
   border-width: 1px;
