@@ -265,13 +265,6 @@ h1, h2, h3, h4, h5 {
   color: #FF986B;
 }
 
-#services {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  min-height: 95vh;
-}
-
 #projects {
   border-style: solid;
   border-width: 1px;

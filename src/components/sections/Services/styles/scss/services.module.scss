@@ -2,8 +2,8 @@
 @import '../../../../../assets/styles/scss/variables';
 
 .services {
-    @include add-testing-border;
-    height: 85vh;
+    //@include add-testing-border;
+    //height: 85vh;
     background: $blue;
     background-position: center;
     position: relative;
@@ -12,7 +12,7 @@
 
 
     h1 {
-        @include add-testing-border;
+        //@include add-testing-border;
         color: $orange;
         width: 80%;
         text-align: center;
@@ -30,7 +30,7 @@
     }
 
     .serviceCards {
-        @include add-testing-border;
+        //@include add-testing-border;
         height: 300px;
         width: 1332px;
         max-width: 80%;
@@ -68,7 +68,7 @@
             
 
             img {
-                @include add-testing-border;
+                //@include add-testing-border;
                 display: block;
                 width: 100px;
                 margin: 24px auto 0 auto;
@@ -85,6 +85,7 @@
                 @include large-mobile {
                     margin: 12px auto 0 auto;
                 }
+
 
                 @include mobile {
                   // margin: 8px auto 0 auto;
@@ -116,7 +117,7 @@
             }
 
             p {
-                @include add-testing-border;
+                //@include add-testing-border;
                 font-size: 14px;
                 width: 80%;
                 color: #FFFF;
@@ -140,4 +141,179 @@
             }
         }
     }
+
+
+    .tools {
+        margin: 180px auto 0 auto;
+
+        h1 {
+            //@include add-testing-border;
+            color: $orange;
+            width: 80%;
+            text-align: center;
+            font-size: 48px;
+    
+    
+            @include medium {
+                font-size: 36px;
+            }
+    
+            @include large-mobile {
+                font-size: 30px;
+            }
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            //@include add-testing-border;
+            color: $light-blue;
+            font-size: 24px;
+            font-family: $main-font;
+            margin: 68px auto 0 auto;
+            width: 1004px;
+            max-width: 80%;
+
+            @include large-mobile {
+                font-size: 20px;
+            }
+    
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        .devTools {
+            //@include add-testing-border;
+            width: 1004px;
+            max-width: 80%;
+            margin: 16px auto 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+            @include iMac {
+                max-width: 90%;
+                //background: black;
+            }
+
+            @include iPad-pro-12 {
+                max-width: 80%;
+                //background: black;
+            }
+
+            @include iPad-pro-11 {
+                max-width: 82%;
+                //background: black;
+            }
+
+            
+
+            .devTool {
+                //@include add-testing-border;
+                width: 164px;
+                height: 130px;
+                margin: 0 auto 20px auto;
+                position: relative;
+
+                @include iMac {
+                    width: 124px;
+                }
+
+                @include iPad-pro-11 {
+                    width: 20%;
+                    height: 112px;
+                }
+
+                @include large-mobile {
+                    width: 30%;
+                    height: 92px;
+                    //background: black;
+                }
+
+                @include small-mobile {
+                    width: 45%;
+                    height: 84px;
+                    //background: black;
+                }
+
+
+                img {
+                    //@include add-testing-border;
+                    width: 90px;
+                    display: block;
+                    margin: 0 auto;
+
+                    @include iMac {
+                        width: 85px;
+                        //background: black;
+                    }
+
+                    @include iPad-pro-11 {
+                        width: 76px;
+                        //background: black;
+                    }
+
+                    @include large-mobile {
+                        width: 56px;
+                        max-width: 96%;
+                        //background: black;
+                    }
+                }
+
+                .Express {
+                    width: 85%;
+                    height: 90px;
+                    object-fit: cover;
+
+                    @include iMac {
+                        max-width: 94%;
+                        //background: black;
+                    }
+
+                    // @include iPad-pro-11 {
+                    //     height: 75px;
+                    //     //background: black;
+                    // }
+
+                    @include iPad-pro-11 {
+                        height: 75px;
+                        //background: black;
+                    }
+
+                    @include large-mobile {
+                        height: 56px;
+                        //background: black;
+                    }
+                }
+
+                
+        
+                p {
+                    //@include add-testing-border;
+                    font-size: 16px;
+                    font-family: $secondary-font;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 0px;
+                    width: 100%;
+                    color: #FFFF;
+
+                    @include large-mobile {
+                        font-size: 14px;
+                    }
+                    
+                    @include small-mobile {
+                        font-size: 12px;
+                        //background: black;
+                    }
+                }
+            }
+            
+        }
+       
+    }
+
 }
