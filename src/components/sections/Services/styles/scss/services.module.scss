@@ -24,9 +24,13 @@
             font-size: 36px;
         }
 
+        @include large-mobile {
+            font-size: 30px;
+        }
+
         @include mobile {
             font-size: 24px;
-       }
+        }
     }
 
     .serviceCards {
@@ -145,6 +149,18 @@
 
     .tools {
         margin: 180px auto 0 auto;
+
+        @include iPad-pro-11 {
+            margin: 160px auto 0 auto;
+        }
+
+        @include large-mobile {
+            margin: 140px auto 0 auto;
+        }
+
+        // @include mobile {
+        //     font-size: 24px;
+        // }
 
         h1 {
             //@include add-testing-border;

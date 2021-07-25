@@ -16,6 +16,34 @@ const illustrator = require('../images/svg/Illustrator.svg');
 const figma = require('../images/svg/Figma.svg');
 const canva = require('../images/svg/Canva.svg');
 
+const webDev = require('../images/svg/WebDev.svg');
+const webDesign = require('../images/svg/WebDesign.svg');
+const uiuxDesign = require('../images/svg/UI-UXDesign.svg');
+
+
+const servicesList = [
+    { 
+        name: "Web Development",
+        description: "Have a stylish, responsive, and mobile-friendly website and web applications made with top and powerful tech tools!",
+        image: webDev,
+        alternative: "Ken Javier can develop websites and web apps for you."
+    },
+
+    { 
+        name: "Web Design",
+        description: "Have a stylish, responsive, and mobile-friendly website and web applications made with top and powerful tech tools!",
+        image: webDesign,
+        alternative: "Ken Javier can design websites and web apps for you."
+    },
+
+    { 
+        name: "UI/UX Design",
+        description: "Have a stylish, responsive, and mobile-friendly website and web applications made with top and powerful tech tools!",
+        image: uiuxDesign,
+        alternative: "Ken Javier can design user interfaces for you."
+    }
+];
+
 
 const devTools = [
     { name: "HTML", image: html },
@@ -39,5 +67,6 @@ const designTools = [
     { name: "Canva", image: canva },
 ]
 
+module.exports.servicesList = servicesList;
 module.exports.devTools = devTools;
 module.exports.designTools = designTools;

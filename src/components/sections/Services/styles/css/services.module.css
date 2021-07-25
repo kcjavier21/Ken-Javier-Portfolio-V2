@@ -19,6 +19,12 @@
   }
 }
 
+@media (max-width: 542px) {
+  .services h1 {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 414px) {
   .services h1 {
     font-size: 24px;
@@ -163,6 +169,18 @@
 
 .services .tools {
   margin: 180px auto 0 auto;
+}
+
+@media (max-width: 834px) {
+  .services .tools {
+    margin: 160px auto 0 auto;
+  }
+}
+
+@media (max-width: 542px) {
+  .services .tools {
+    margin: 140px auto 0 auto;
+  }
 }
 
 .services .tools h1 {
