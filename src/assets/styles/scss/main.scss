@@ -228,10 +228,10 @@ h1, h2, h3, h4, h5 {
 //     min-height: 95vh;
 // }
 
-#projects {
-    @include add-testing-border;
-    min-height: 95vh;
-}
+// #projects {
+//     @include add-testing-border;
+//     min-height: 95vh;
+// }
 
 #contact {
     @include add-testing-border;

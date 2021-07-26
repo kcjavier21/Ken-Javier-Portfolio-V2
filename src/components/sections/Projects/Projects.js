@@ -4,36 +4,36 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import michiRamen from '../../../assets/images/jpg-png/MichiRamen.png';
 
-const Projects = () => {
+const Projects = (props) => {
 
     const data = [
         { 
-            name: "Name 1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            name: "Michi Ramen Clone",
+            description: "A Clone of the restaurant's website named Michi Ramen. Created using React, Sass, and other third-party libraries.",
             image: michiRamen
         },
 
         { 
-            name: "Name 2", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            name: "Zaid Tech", 
+            description: "A website of a web and creatives agency. Created using Next, Sass, Node, and Express.",
             image: michiRamen
         },
         
         { 
-            name: "Name 3", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            name: "Sellify", 
+            description: "An app that aims to hasten live selling experience with automated order collection and management, real-time queueing system, and maximizes sales engagement through customer segmentation. Still an ongoing project made with React, Sass, Bootstrap, Node, Express, and other third-party libraries.",
             image: michiRamen 
         },
         
         { 
-            name: "Name 4", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            name: "House of Kicks", 
+            description:"A simple e-commerce website where you can purchase sport shoes. Created using HTML, CSS, and Vanilla JavaScript.",
             image: michiRamen
         },
         
         { 
-            name: "Name 5", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            name: "Guess The Number Game", 
+            description: "A mini project that I made using HTML, CSS, Bootstrap, and Vanilla JavaScript.", 
             image: michiRamen
         },
     ];
@@ -53,19 +53,37 @@ const Projects = () => {
 
                 <div className={styles.projectSlide} style={{gridTemplateColumns: `repeat(${data.length}, 100%)`}}>
 
-                    { data.map((item, index) => 
-                        <div key={item.name} className={styles.projectSlideItem} style={{transform: `translate(-${slideNumber * 100}%, 0)`}}>
-                            <div className={styles.description}>
-                                <h1>{item.name}</h1>
-                                <p>{item.description}</p>
-                            </div>
+                    { data.map((item, index) => props.innerWidth > 680 ? <>
+                            <div key={item.name} className={styles.projectSlideItem} style={{transform: `translate(-${slideNumber * 100}%, 0)`}}>
+                                <div className={styles.description}>
+                                    <h1>{item.name}</h1>
+                                    <p>{item.description}</p>
+                                </div>
 
-                            <div className={styles.imageSection}>
-                                {/* <h1>{item.image}</h1> */}
-                                <StaticImage src='../../../assets/images/jpg-png/MichiRamen.png' alt="Michi Ramen" placeholder="tracedSVG" 
-                                    layout="constrained" className={styles.projImage} />
-                            </div>
-                        </div> )}
+                                <div className={styles.imageSection}>
+                                    {/* <h1>Image Section</h1> */}
+                                    <StaticImage src='../../../assets/images/jpg-png/MichiRamen.png' alt="Michi Ramen" placeholder="tracedSVG" 
+                                        layout="constrained" className={styles.projImage} />
+                                        {/* <img src={item.image} alt="Michi Ramen" className={styles.projImage}/> */}
+                                </div>
+                            </div> 
+                        </> : <>
+                            <div key={item.name} className={styles.projectSlideItem} style={{transform: `translate(-${slideNumber * 100}%, 0)`}}>
+                                <div className={styles.imageSection}>
+                                    {/* <h1>Image Section</h1> */}
+                                    <StaticImage src='../../../assets/images/jpg-png/MichiRamen.png' alt="Michi Ramen" placeholder="tracedSVG" 
+                                        layout="constrained" className={styles.projImage} />
+                                        {/* <img src={item.image} alt="Michi Ramen" className={styles.projImage}/> */}
+                                </div>
+
+                                <div className={styles.description}>
+                                    <h1>{item.name}</h1>
+                                    <p>{item.description}</p>
+                                </div>                             
+                            </div> 
+                        </>
+                        
+                    )}
 
                 </div>
 

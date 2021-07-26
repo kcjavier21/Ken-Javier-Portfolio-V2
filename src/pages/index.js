@@ -47,7 +47,7 @@ export default function Home() {
             </div>
 
             <div id="projects">
-                <Projects/>
+                <Projects innerWidth={innerWidth}/>
             </div>
 
             <div id="contact">
