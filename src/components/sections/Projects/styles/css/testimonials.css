@@ -1,0 +1,35 @@
+.testimonials {
+  background: #1D3441;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 180px 0 0 0;
+  border-color: red;
+}
+
+.testimonials h1 {
+  color: #FF986B;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 48px;
+}
+
+@media (max-width: 1024px) {
+  .testimonials h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 542px) {
+  .testimonials h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 414px) {
+  .testimonials h1 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=testimonials.css.map */

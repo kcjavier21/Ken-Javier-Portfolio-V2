@@ -1,4 +1,4 @@
-.projects {
+.sampleProjects {
   background: #1D3441;
   background-position: center;
   position: relative;
@@ -7,7 +7,7 @@
   border-color: red;
 }
 
-.projects h1 {
+.sampleProjects h1 {
   color: #FF986B;
   width: 80%;
   text-align: center;
@@ -16,24 +16,24 @@
 }
 
 @media (max-width: 1024px) {
-  .projects h1 {
+  .sampleProjects h1 {
     font-size: 36px;
   }
 }
 
 @media (max-width: 542px) {
-  .projects h1 {
+  .sampleProjects h1 {
     font-size: 30px;
   }
 }
 
 @media (max-width: 414px) {
-  .projects h1 {
+  .sampleProjects h1 {
     font-size: 24px;
   }
 }
 
-.projects .projectSlideShowContainer {
+.sampleProjects .projectSlideShowContainer {
   border-color: #92D7FB;
   width: 1296px;
   height: 460px;
@@ -43,26 +43,26 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer {
+  .sampleProjects .projectSlideShowContainer {
     height: 416px;
   }
 }
 
 @media (max-width: 1030px) {
-  .projects .projectSlideShowContainer {
+  .sampleProjects .projectSlideShowContainer {
     height: 392px;
   }
 }
 
 @media (max-width: 834px) {
-  .projects .projectSlideShowContainer {
+  .sampleProjects .projectSlideShowContainer {
     height: 350px;
     max-width: 90%;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer {
+  .sampleProjects .projectSlideShowContainer {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: 49% 49%;
@@ -74,13 +74,13 @@
 }
 
 @media (max-width: 320px) {
-  .projects .projectSlideShowContainer {
+  .sampleProjects .projectSlideShowContainer {
     max-width: 90%;
     height: 440px;
   }
 }
 
-.projects .projectSlideShowContainer .projectSlideShow {
+.sampleProjects .projectSlideShowContainer .projectSlideShow {
   margin: auto;
   left: 0;
   right: 0;
@@ -98,33 +98,33 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer .projectSlideShow {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow {
     height: 90%;
     width: 80%;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .projectSlideShow {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow {
     height: 90%;
   }
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
   border-color: lightgreen;
   height: 100%;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 49% 49%;
-      grid-template-columns: 49% 49%;
+  -ms-grid-columns: 45% 53%;
+      grid-template-columns: 45% 53%;
   grid-gap: 2%;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: 50% 43%;
@@ -135,52 +135,57 @@
 }
 
 @media (max-width: 542px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
     height: 100%;
     -ms-grid-rows: 43% 50%;
         grid-template-rows: 43% 50%;
   }
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide .description {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description {
   text-align: left;
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
   font-size: 36px;
-  color: #92D7FB;
   text-align: left;
   width: 98%;
   margin-top: 36px;
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
     font-size: 32px;
   }
 }
 
 @media (max-width: 1030px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
     margin-top: 16px;
   }
 }
 
 @media (max-width: 834px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
     font-size: 24px;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
     margin-top: 8px;
     font-size: 20px;
     margin: 0 auto;
   }
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 a {
+  text-decoration: none;
+  color: #92D7FB;
+  cursor: pointer;
+}
+
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
   font-size: 20px;
   color: #FFFF;
   width: 98%;
@@ -189,65 +194,59 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1030px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
-    margin-top: 16px;
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 834px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
     margin-top: 12px;
     margin: 8px auto 0 auto;
   }
 }
 
 @media (max-width: 542px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
     font-size: 12px;
   }
 }
 
 @media (max-width: 414px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
     font-size: 11px;
   }
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection {
   width: 98%;
 }
 
-.projects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
   height: 100%;
   border-radius: 16px;
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
     width: 232px;
     max-width: 98%;
   }
 }
 
 @media (max-width: 414px) {
-  .projects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
     width: auto;
   }
 }
 
-.projects .projectSlideShowContainer i {
+.sampleProjects .projectSlideShowContainer i {
   color: #92D7FB;
   position: absolute;
   margin: 0 auto;
@@ -261,19 +260,19 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer i {
+  .sampleProjects .projectSlideShowContainer i {
     font-size: 28px;
   }
 }
 
 @media (max-width: 834px) {
-  .projects .projectSlideShowContainer i {
+  .sampleProjects .projectSlideShowContainer i {
     font-size: 24px;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer i {
+  .sampleProjects .projectSlideShowContainer i {
     margin: 0 auto;
     top: 20%;
     -webkit-transform: translateY(0%);
@@ -282,28 +281,28 @@
 }
 
 @media (max-width: 414px) {
-  .projects .projectSlideShowContainer i {
+  .sampleProjects .projectSlideShowContainer i {
     font-size: 20px;
   }
 }
 
-.projects .projectSlideShowContainer i:hover {
+.sampleProjects .projectSlideShowContainer i:hover {
   color: #5f95b1;
 }
 
-.projects .projectSlideShowContainer .left {
+.sampleProjects .projectSlideShowContainer .left {
   left: 0px;
 }
 
-.projects .projectSlideShowContainer .right {
+.sampleProjects .projectSlideShowContainer .right {
   right: 0px;
 }
 
-.projects .projectSlideShowContainer .slideBeads {
+.sampleProjects .projectSlideShowContainer .slideBeads {
   position: absolute;
   bottom: 0px;
   left: 5%;
-  width: 160px;
+  width: 240px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,19 +313,19 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectSlideShowContainer .slideBeads {
     left: 10%;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectSlideShowContainer .slideBeads {
     left: 5%;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectSlideShowContainer .slideBeads {
     margin: auto;
     left: 0;
     right: 0;
@@ -340,7 +339,7 @@
   }
 }
 
-.projects .projectSlideShowContainer .slideBeads span {
+.sampleProjects .projectSlideShowContainer .slideBeads span {
   height: 20px;
   width: 20px;
   background-color: white;
@@ -351,40 +350,40 @@
 }
 
 @media (max-width: 1280px) {
-  .projects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectSlideShowContainer .slideBeads span {
     height: 18px;
     width: 18px;
   }
 }
 
 @media (max-width: 1024px) {
-  .projects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectSlideShowContainer .slideBeads span {
     height: 16px;
     width: 16px;
   }
 }
 
 @media (max-width: 680px) {
-  .projects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectSlideShowContainer .slideBeads span {
     margin: 0 6px;
   }
 }
 
 @media (max-width: 414px) {
-  .projects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectSlideShowContainer .slideBeads span {
     height: 14px;
     width: 14px;
   }
 }
 
 @media (max-width: 320px) {
-  .projects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectSlideShowContainer .slideBeads span {
     height: 10px;
     width: 10px;
   }
 }
 
-.projects .projectSlideShowContainer .slideBeads span.active {
+.sampleProjects .projectSlideShowContainer .slideBeads span.active {
   background-color: gray;
 }
-/*# sourceMappingURL=projects.module.css.map */
+/*# sourceMappingURL=sampleProjects.module.css.map */

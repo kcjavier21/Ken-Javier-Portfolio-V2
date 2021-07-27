@@ -1,0 +1,175 @@
+@import '../../../../../assets/styles/scss/mixins';
+@import '../../../../../assets/styles/scss/variables';
+
+.testimonials {
+    ////@include add-testing-border;
+    //height: 85vh;
+    background: $blue;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 180px 0 180px 0;
+    border-color: red;
+
+    
+    h1 {
+        //@include add-testing-border;
+        color: $orange;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 48px;
+
+
+        @include medium {
+            font-size: 36px;
+        }
+
+        @include large-mobile {
+            font-size: 30px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    .testimonialsSlideShowContainer {
+        @include add-testing-border;
+        position: relative;
+        margin: 0 auto;
+        width: 1312px;
+        height: 412px;
+        max-width: 80%;
+
+        .testimonialsSlideShow {
+            @include add-testing-border;
+            height: 85%;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(11, 50%);
+            margin: 0 auto;
+            //grid-column-gap: 4%;
+            overflow: hidden;
+
+            .testimonialSlide {
+                //@include add-testing-border;
+                //width: 45%;
+                border-radius: 16px;
+                height: 100%;
+                color: #FFFF;
+                font-family: $secondary-font;
+                text-align: center;
+                //transform: translate(-0, 0);
+                margin: 0 auto;
+                //width: 92%;
+                transition: 300ms ease-in-out;
+             
+
+                h3 {
+                    color: $light-blue;
+                }
+
+                .testimonialContainer {
+                    @include add-testing-border;
+                    width: 92%;
+                    height: 100%;
+                    margin: 0 auto;
+                    background: $dark-blue;
+                    border-radius: 20px;
+                
+
+                    .imageSection {
+                        height: 80px;
+                        width: 80px;
+                        border-radius: 100%;
+                        background: gray;
+                        margin: 36px auto 0 auto;
+                        overflow: hidden;
+    
+                        .image {
+                            margin: 0 auto;
+                            height: 100%;
+                        }
+                    }
+    
+                    .attestantDetails {
+                        //@include add-testing-border;
+                        width: 90%;
+                        margin: 16px auto 0 auto;
+    
+                        h4 {
+                            //@include add-testing-border;
+                            font-size: 24px;
+                            color: $light-blue;
+                        }
+    
+                        p {
+                            //@include add-testing-border;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #FFFF;
+                        }
+                    }
+    
+                    .testimony {
+                        //@include add-testing-border;
+                        width: 85%;
+                        color: #FFFF;
+                        font-size: 14px;
+                        margin: 16px auto 0 auto;
+                    }
+
+                }
+
+                
+
+            }
+        }
+    }
+
+
+    i {
+        color: $light-blue;
+        position: absolute;
+        @include vertically-centered;
+        top: 45%;
+        font-size: 32px;
+        cursor: pointer;
+
+        @include iMac {
+            font-size: 28px;
+        }
+
+        @include iPad-pro-11 {
+            font-size: 24px;
+        }
+
+        @include small-tablet {
+            margin: 0 auto;
+            top: 20%;
+            transform: translateY(0%);
+            //transition: 200ms;  
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+
+        // @include small-tablet {
+        //     margin-top: 20px;
+        // }
+
+        &:hover {
+            color: #5f95b1;
+        }
+    }
+
+    .left {
+       left: 0px;
+    }
+
+    .right {
+        right: 0px;
+     }
+}

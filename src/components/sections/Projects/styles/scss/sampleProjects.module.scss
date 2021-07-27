@@ -1,7 +1,7 @@
 @import '../../../../../assets/styles/scss/mixins';
 @import '../../../../../assets/styles/scss/variables';
 
-.projects {
+.sampleProjects {
     ////@include add-testing-border;
     //height: 85vh;
     background: $blue;
@@ -108,7 +108,7 @@
             height: 100%;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 49% 49%;
+            grid-template-columns: 45% 53%;
             grid-gap: 2%;
             transition: 300ms ease-in-out;
             
@@ -151,7 +151,6 @@
                 h1 { 
                     //@include add-testing-border;
                     font-size: 36px;
-                    color: $light-blue;
                     text-align: left;
                     width: 98%;
                     margin-top: 36px;
@@ -179,6 +178,13 @@
                         //text-align: center;
                         margin: 0 auto;
                     }
+
+
+                    a {
+                        text-decoration: none;
+                        color: $light-blue;
+                        cursor: pointer;
+                    }
                 }
 
                 p {
@@ -189,14 +195,16 @@
                     font-family: $secondary-font;
                     margin: 32px 24px 0 0;
                     
+                   
 
                     @include iMac {
-                        font-size: 16px;
+                        font-size: 15px;
                     }
 
-                    @include iPad-pro-12 {
-                        margin-top: 16px;
-                    }
+
+                    // @include iPad-pro-12 {
+                    //     margin-top: 16px;
+                    // }
 
                     @include iPad-pro-11 {    
                         font-size: 14px;
@@ -298,7 +306,7 @@
         position: absolute;
         bottom: 0px;
         left: 5%;
-        width: 160px;
+        width: 240px;
         display: flex;
         flex-direction: row;
 
