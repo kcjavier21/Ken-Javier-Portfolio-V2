@@ -1,40 +1,116 @@
 import React, { useState } from 'react';
 import * as styles from '../styles/css/testimonials.module.css';
-import { StaticImage } from 'gatsby-plugin-image';
-//import maureen from '../../../../assets/images/jpg-png/Mau.jpg';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 
-const Testimonials = () => {
+const query = graphql`
+  {
+    allContentfulTestimonials(sort: {order: DESC, fields: contentful_id}) {
+      nodes {
+        attestantName
+        attestantPosition
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+        testimony {
+          internal {
+            content
+          }
+        }
+      }
+    }
+  }
+`
+
+
+const Testimonials = (props) => {
+    const data = useStaticQuery(query);
+    const nodes = data.allContentfulTestimonials.nodes;
 
     let [slideNumber, setSlideNumber] = useState(0);
-
 
     // ==== Functions for Side solutions =====
     const noMoreClicking = () => {
         console.log("No More Clicking!");
     }
 
+
     const handleClick = () => {
         console.log("Clicked!");
     }
 
-    const generateControlButtons = () => {
+
+     // === Functions to Generate Codes ====
+    const generateControlButtonsForLargeDevices = () => {
         /* ==== Control Buttons to switch between slides (Left and Right) ==== */
         return <>
                     {/* === Left Button ==== */}
                     <i className={`fas fa-arrow-circle-left ${styles.left}`} role="presentation" 
-                            onKeyDown={handleClick} onClick={() => { slideNumber <= 4 && slideNumber >= 1 ? 
+                            onKeyDown={handleClick} onClick={() => { slideNumber <= nodes.length  && slideNumber >= 1 ? 
+                            setSlideNumber(slideNumber - 2) : noMoreClicking() }}/>
+                    
+                    {/* ==== Right Button ==== */}
+                    <i className={`fas fa-arrow-circle-right ${styles.right}`} role="presentation" 
+                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length-1 ? 
+                        setSlideNumber(slideNumber + 2) : noMoreClicking() }}/>  
+                </>
+    }
+
+
+    const generateControlButtonsForSmallDevices = () => {
+        /* ==== Control Buttons to switch between slides (Left and Right) ==== */
+        return <>
+                    {/* === Left Button ==== */}
+                    <i className={`fas fa-arrow-circle-left ${styles.left}`} role="presentation" 
+                            onKeyDown={handleClick} onClick={() => { slideNumber <= nodes.length  && slideNumber >= 1 ? 
                             setSlideNumber(slideNumber - 1) : noMoreClicking() }}/>
                     
                     {/* ==== Right Button ==== */}
                     <i className={`fas fa-arrow-circle-right ${styles.right}`} role="presentation" 
-                        onKeyDown={handleClick} onClick={() => { slideNumber < 4 ? 
+                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length-1 ? 
                         setSlideNumber(slideNumber + 1) : noMoreClicking() }}/>  
                 </>
     }
 
-    const list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
+    let counter = 0;
+
+    const generateSlideBeadsForLargeDevices = (index) => {
+        // ==== Generate Slide Beads for larger devices like laptops and desktops ====
+        const half = Math.ceil(nodes.length / 2);
+        counter++;
+        return counter <= half ? <span key={index * 2} className={ index * 2 === slideNumber ? `${ styles.active }` : '' } /> : '';
+    }
+
+
+    const generateSlideBeadsForSmallDevices = (index) => {
+        // ==== Generate Slide Beads for smaller devices like tablets and mobile phones ====
+        return <span key={index} className={ index === slideNumber ? `${ styles.active }` : '' } /> 
+    }
+
+
+    const generateTestimonialSlide = (item) => {
+        const pathToImage = getImage(item.image);
+
+        return <div className={styles.testimonialSlide} key={item.attestantName} style={{transform: `translate(-${slideNumber * 100}%, 0)`}}>
+                    <div className={styles.testimonialContainer}>
+                        {/* Attestant's Image */}
+                        <section className={styles.imageSection}>
+                                <GatsbyImage image={pathToImage} alt={item.attestantName} className={styles.projImage} />
+                        </section>
+                        {/* Attestant's Details */}
+                        <section className={styles.attestantDetails}>
+                            <h4>{item.attestantName}</h4>
+                            <p>{item.attestantPosition}</p>
+                        </section>
+                        {/* Testimony */}
+                        <section className={styles.testimony}>
+                            <p>{item.testimony.internal.content}</p>
+                        </section>
+                    </div>
+            </div>
+    }
 
 
     return (
@@ -42,40 +118,27 @@ const Testimonials = () => {
             <h1>Testimonials</h1>
 
             <div className={styles.testimonialsSlideShowContainer}>
-                { generateControlButtons() }
-                <div className={styles.testimonialsSlideShow}>
-                    
-                    { console.log(slideNumber) }
-                    
-                    { list.map((item) => <div className={styles.testimonialSlide} key={item} style={{transform: `translate(-${slideNumber * 200}%, 0)`}}>
-
-                            <div className={styles.testimonialContainer}>
-
-                                <section className={styles.imageSection}>
-                                    <StaticImage src='../../../../assets/images/jpg-png/Mau.jpg' alt="Maureen" 
-                                        placeholder='tracedSVG' className={styles.image} />
-                                </section>
-        
-                                <section className={styles.attestantDetails}>
-                                    <h4>Maureen Catura {item}</h4>
-                                    <p>CEO of Matrix Co.</p>
-                                </section>
-        
-                                <section className={styles.testimony}>
-                                    <p>I had an opportunity to work with someone who's conscientious and competent person like Ken Javier. He showed great determination and his earnest effort to learn about Web Development. For that reason, he have gained experiences and a wide skillset in developing web applications.</p>
-                                </section>
-
-                            </div>
-                            
-                        </div>
-                    )}
-                   
-
-
-
-                    <div className={styles.testimonialSlide}>
-                    </div>
+                {/* ==== Control Buttons ===== */}
+                { props.innerWidth > 834 ? generateControlButtonsForLargeDevices() : generateControlButtonsForSmallDevices() }
+                
+                <div className={styles.testimonialsSlideShow}>      
+                     {/* ==== Testimonial Slides ===== */}
+                    { nodes.map((item) => generateTestimonialSlide(item))}
                 </div>
+
+                <div className={styles.slideBeads}>
+                    {/* ==== Slide Beads ===== */}
+                    <div className={styles.slideBeads}>
+                        { nodes.map((item, index) => props.innerWidth > 834 ? generateSlideBeadsForLargeDevices(index) : 
+                            generateSlideBeadsForSmallDevices(index) ) }
+                    </div>  
+                </div>
+            </div>
+
+
+
+            <div className={styles.organizations}>
+                
             </div>
         </main>
     )

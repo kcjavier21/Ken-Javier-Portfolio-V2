@@ -3,7 +3,6 @@
 
 .testimonials {
     ////@include add-testing-border;
-    //height: 85vh;
     background: $blue;
     background-position: center;
     position: relative;
@@ -20,7 +19,6 @@
         margin: 0 auto;
         font-size: 48px;
 
-
         @include medium {
             font-size: 36px;
         }
@@ -35,34 +33,68 @@
     }
 
     .testimonialsSlideShowContainer {
-        @include add-testing-border;
+        //@include add-testing-border;
         position: relative;
-        margin: 0 auto;
+        margin: 72px auto 0 auto;
         width: 1312px;
         height: 412px;
-        max-width: 80%;
+        max-width: 90%;
+
+        @include iMac {
+            height: 428px;
+        }
+
+        @include iPad-pro-12 {
+            height: 460px;
+        }
+
+        @include iPad-pro-11 {
+            height: 440px;
+            max-width: 80%;
+        }
+
+        @include large-mobile {
+            height: 400px;
+        }
+
+        @include mobile {
+            height: 480px;     
+        }
+
+        @include small-mobile {
+            height: 432px;
+            max-width: 90%;
+        }
 
         .testimonialsSlideShow {
-            @include add-testing-border;
-            height: 85%;
+            //@include add-testing-border;
+            height: 87%;
             width: 80%;
             display: grid;
             grid-template-columns: repeat(11, 50%);
             margin: 0 auto;
-            //grid-column-gap: 4%;
             overflow: hidden;
 
+
+            @include iPad-pro-12 {
+                width: 85%;
+            }
+
+            @include iPad-pro-11 {
+                grid-template-columns: repeat(11, 100%);
+                width: 75%;
+            }
+
+            @include large-mobile {
+                width: 85%;
+            }
+
             .testimonialSlide {
-                //@include add-testing-border;
-                //width: 45%;
-                border-radius: 16px;
                 height: 100%;
                 color: #FFFF;
                 font-family: $secondary-font;
                 text-align: center;
-                //transform: translate(-0, 0);
                 margin: 0 auto;
-                //width: 92%;
                 transition: 300ms ease-in-out;
              
 
@@ -71,12 +103,14 @@
                 }
 
                 .testimonialContainer {
-                    @include add-testing-border;
+                    //@include add-border();
+                    @include add-border(solid, 1px,rgba(0, 0, 0, 0), 16px);
                     width: 92%;
-                    height: 100%;
+                    height: 98%;
                     margin: 0 auto;
                     background: $dark-blue;
                     border-radius: 20px;
+                    overflow: hidden;
                 
 
                     .imageSection {
@@ -86,6 +120,16 @@
                         background: gray;
                         margin: 36px auto 0 auto;
                         overflow: hidden;
+
+                        @include large-mobile {
+                            width: 72px;
+                            height: 72px;
+                            margin-top: 28px;
+                        }
+
+                        @include small-mobile {
+                            margin-top: 20px;
+                        }
     
                         .image {
                             margin: 0 auto;
@@ -102,6 +146,14 @@
                             //@include add-testing-border;
                             font-size: 24px;
                             color: $light-blue;
+
+                            @include large-mobile {
+                                font-size: 20px;
+                            }
+
+                            @include small-mobile {
+                                font-size: 16px;
+                            }
                         }
     
                         p {
@@ -109,6 +161,14 @@
                             font-size: 14px;
                             font-weight: 500;
                             color: #FFFF;
+
+                            @include large-mobile {
+                                font-size: 12px;
+                            }
+
+                            @include small-mobile {
+                                font-size: 11px;
+                            }
                         }
                     }
     
@@ -118,13 +178,66 @@
                         color: #FFFF;
                         font-size: 14px;
                         margin: 16px auto 0 auto;
+
+                        @include large-mobile {
+                            font-size: 12px;
+                        }
+
+                        @include small-mobile {
+                            font-size: 11px;
+                        }
                     }
-
                 }
-
-                
-
             }
+        }
+
+
+        .slideBeads {
+            //@include add-testing-border;
+            @include absolutely-centered;
+            position: absolute;
+            bottom: 0px;
+            width: 240px;
+            display: flex;
+            flex-direction: row;
+            //height: 30px;
+            width: auto;
+            text-align: center;
+            justify-content: center;
+                     
+            
+            span {
+                height: 20px;
+                width: 20px;
+                background-color: white;
+                margin: 0 6px;
+                border-radius: 100%;
+                transition: 300ms ease-in-out;
+    
+                @include iMac {
+                    height: 18px;
+                    width: 18px;
+                }
+    
+                @include medium {
+                    height: 16px;
+                    width: 16px;
+                }
+    
+                @include mobile {
+                    height: 14px;
+                    width: 14px;
+                }
+    
+                @include small-mobile {
+                    height: 10px;
+                    width: 10px;
+                }
+    
+                &.active {
+                    background-color: gray;
+                }
+            }     
         }
     }
 
@@ -137,6 +250,10 @@
         font-size: 32px;
         cursor: pointer;
 
+        &:hover {
+            color: #5f95b1;
+        }
+
         @include iMac {
             font-size: 28px;
         }
@@ -145,24 +262,10 @@
             font-size: 24px;
         }
 
-        @include small-tablet {
-            margin: 0 auto;
-            top: 20%;
-            transform: translateY(0%);
-            //transition: 200ms;  
-        }
-
         @include mobile {
             font-size: 20px;
         }
-
-        // @include small-tablet {
-        //     margin-top: 20px;
-        // }
-
-        &:hover {
-            color: #5f95b1;
-        }
+        
     }
 
     .left {
@@ -171,5 +274,15 @@
 
     .right {
         right: 0px;
+     }
+
+
+
+     .organizations {
+         @include add-testing-border;
+         height: 100px;
+         width: 920px;
+         max-width: 80%;
+         margin: 80px auto 0 auto;
      }
 }
