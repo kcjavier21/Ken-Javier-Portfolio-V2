@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "gatsby": "^3.9.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-sharp": "^3.10.1",
@@ -22,9 +23,11 @@
     "gatsby-source-contentful": "^5.10.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
+    "joi-browser": "^13.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-swipeable": "^6.1.2"
+    "react-swipeable": "^6.1.2",
+    "react-toastify": "^7.0.4"
   },
   "devDependencies": {
     "prettier": "2.3.2"
