@@ -19,7 +19,7 @@ select:-webkit-autofill:focus {
   background-position: center;
   position: relative;
   overflow: hidden;
-  padding: 180px 0;
+  padding: 0 0 80px 0;
   border-color: red;
 }
 
@@ -50,24 +50,72 @@ select:-webkit-autofill:focus {
 }
 
 .contact .formAndDetailsContainer {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
   width: 986px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 48% 48%;
+      grid-template-columns: 48% 48%;
   margin: 80px auto 0 auto;
+  max-width: 80%;
+  grid-gap: 4%;
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 55% 45%;
+        grid-template-rows: 55% 45%;
+    grid-gap: 0%;
+    width: 680px;
+    height: 1080px;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer {
+    -ms-grid-rows: 60% 40%;
+        grid-template-rows: 60% 40%;
+    height: 900px;
+  }
+}
+
+@media (max-width: 414px) {
+  .contact .formAndDetailsContainer {
+    max-width: 100%;
+  }
 }
 
 .contact .formAndDetailsContainer .form {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: #FFFF;
+  max-width: 99%;
+  position: relative;
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .form {
+    text-align: center;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .form {
+    text-align: center;
+    width: 80vw;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .contact .formAndDetailsContainer .form {
+    width: 80vw;
+  }
 }
 
 .contact .formAndDetailsContainer .form input {
@@ -79,11 +127,24 @@ select:-webkit-autofill:focus {
   height: 40px;
   margin-bottom: 16px;
   background: #101E25;
-  max-width: 98%;
+  max-width: 96% !important;
   padding: 0 8px;
   color: #FFFF;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .form input {
+    height: 32px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 414px) {
+  .contact .formAndDetailsContainer .form input {
+    width: 75vw;
+  }
 }
 
 .contact .formAndDetailsContainer .form input:focus {
@@ -111,6 +172,32 @@ select:-webkit-autofill:focus {
   background: #d37851;
 }
 
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .form input.submitBtn {
+    position: absolute;
+    bottom: 5%;
+    right: 4%;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .form input.submitBtn {
+    width: 140px;
+    height: 36px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact .formAndDetailsContainer .form input.submitBtn {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    bottom: 5%;
+    right: 0px;
+  }
+}
+
 .contact .formAndDetailsContainer .form textarea {
   border-style: solid;
   border-width: 2px;
@@ -120,44 +207,93 @@ select:-webkit-autofill:focus {
   height: 220px;
   margin-bottom: 16px;
   background: #101E25;
-  max-width: 98%;
+  max-width: 96%;
   padding: 8px;
   color: #FFFF;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   resize: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 414px) {
+  .contact .formAndDetailsContainer .form textarea {
+    font-size: 12px;
+    width: 75vw;
+  }
 }
 
 .contact .formAndDetailsContainer .contactDetails {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1.2fr 0.8fr;
       grid-template-rows: 1.2fr 0.8fr;
-  padding-left: 20px;
 }
 
-.contact .formAndDetailsContainer .contactDetails .basicDetail {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails {
+    -ms-grid-rows: 70% 28%;
+        grid-template-rows: 70% 28%;
+    grid-gap: 2%;
+  }
+}
+
+.contact .formAndDetailsContainer .contactDetails .basicDetails {
+  width: 98%;
+  border-color: red;
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails {
+    margin: 0 auto;
+  }
+}
+
+.contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
+  border-color: green;
   height: 56px;
   width: 394px;
   margin-top: 25px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
   position: relative;
   max-width: 95%;
+  max-height: 30%;
 }
 
-.contact .formAndDetailsContainer .contactDetails .basicDetail img {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
+    margin: 25px auto 0 auto;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
+    width: 94%;
+    margin-top: 20px;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
+  }
+}
+
+@media (max-width: 414px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
+    margin-top: 16px;
+  }
+}
+
+.contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail img {
   width: 48px;
   position: absolute;
   margin: 0 auto;
@@ -169,10 +305,13 @@ select:-webkit-autofill:focus {
   left: 4px;
 }
 
-.contact .formAndDetailsContainer .contactDetails .basicDetail p {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail img {
+    width: 36px;
+  }
+}
+
+.contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: #FFFF;
@@ -187,13 +326,37 @@ select:-webkit-autofill:focus {
   width: 80%;
 }
 
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
+    font-size: 12px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
+    font-size: 11px;
+    width: 78%;
+  }
+}
+
 .contact .formAndDetailsContainer .contactDetails .socialLinks {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   color: white;
+  max-width: 95%;
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks {
+    font-size: 16px;
+  }
 }
 
 .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
@@ -201,11 +364,26 @@ select:-webkit-autofill:focus {
   margin-bottom: 20px;
 }
 
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
+    font-size: 14px;
+  }
+}
+
 .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  width: auto;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,8 +393,31 @@ select:-webkit-autofill:focus {
           flex-direction: row;
 }
 
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons {
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
   width: 48px;
   margin-right: 20px;
+}
+
+@media (max-width: 834px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 542px) {
+  .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
+    width: 36px;
+  }
 }
 /*# sourceMappingURL=contact.module.css.map */

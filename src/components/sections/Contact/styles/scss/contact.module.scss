@@ -24,7 +24,7 @@ select:-webkit-autofill:focus {
     background-position: center;
     position: relative;
     overflow: hidden;
-    padding: 180px 0;
+    padding: 0 0 80px 0;
     border-color: red;
 
     
@@ -52,19 +52,58 @@ select:-webkit-autofill:focus {
 
 
     .formAndDetailsContainer {
-        @include add-testing-border;
+        //@include add-testing-border;
         width: 986px;
         //height: 507px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 48% 48%;
         margin: 80px auto 0 auto;
-        
+        max-width: 80%;
+        grid-gap: 4%;
+
+        @include iPad-pro-11 {
+            grid-template-columns: auto;
+            grid-template-rows: 55% 45%;
+            grid-gap: 0%;
+            width: 680px;
+            height: 1080px;
+        }
+
+        @include large-mobile {
+            grid-template-rows: 60% 40%;
+            height: 900px;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+
 
         .form {
-            @include add-testing-border;
+            //@include add-testing-border;
             font-family: $secondary-font;
             font-size: 14px;
             color: #FFFF;
+            max-width: 99%;
+            position: relative;
+
+            @include iPad-pro-11 {
+                text-align: center;
+                width: 90%;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            @include large-mobile {
+                text-align: center;
+                width: 80vw;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            @include mobile {
+                width: 80vw;
+            }
 
             input {
                 @include add-border(solid, 2px, $light-blue, 8px);
@@ -72,11 +111,23 @@ select:-webkit-autofill:focus {
                 height: 40px;
                 margin-bottom: 16px;
                 background: $dark-blue;
-                max-width: 98%;
+                max-width: 96% !important;
                 padding: 0 8px; 
                 color: #FFFF;
                 transition: 300ms ease-in-out;
 
+                @include large-mobile {
+                    height: 32px;
+                    font-size: 12px;
+                }
+
+                @include mobile {
+                    width: 75vw;   
+                }
+
+                
+
+                
 
                 &:focus {
                     outline: none !important;
@@ -99,6 +150,28 @@ select:-webkit-autofill:focus {
                     &:hover {
                         background: #d37851;
                     }
+
+
+                    @include iPad-pro-11 {
+                        position: absolute;
+                        bottom: 5%;
+                        right: 4%;
+                    }
+
+                    @include large-mobile {
+                        width: 140px;
+                        height: 36px;
+                        right: 0px;
+                    }
+
+                    @include small-mobile {
+                        width: 120px;
+                        height: 30px;
+                        position: absolute;
+                        bottom: 5%;
+                        right: 0px;
+                    }
+
                 }
             }
 
@@ -108,78 +181,181 @@ select:-webkit-autofill:focus {
                 height: 220px;
                 margin-bottom: 16px;
                 background: $dark-blue;
-                max-width: 98%;
+                max-width: 96%;
                 padding: 8px;
                 color: #FFFF;
                 transition: 300ms ease-in-out;
                 resize: none;
+                font-family: $secondary-font;
+                font-size: 14px;
+
+                @include mobile {
+                    font-size: 12px;
+                    width: 75vw;
+                }
+
             }
         }
 
 
         .contactDetails {
-            @include add-testing-border;
+            //@include add-testing-border;
             display: grid;
             grid-template-rows: 1.2fr 0.8fr;
-            padding-left: 20px;
+            //padding-left: 20px;
+            //max-width: 50%;
 
-            .basicDetail {
-                @include add-testing-border;
-                height: 56px;
-                width: 394px;
-                margin-top: 25px;
-                display: grid;
-                grid-template-columns: 1fr 5fr;
-                position: relative;
-                max-width: 95%;
+            @include iPad-pro-11 {
+                //grid-template-rows: 1.3fr 0.7fr;
+                width: 90%;
+                max-width: 90%;
+                margin: 0 auto;
+            }
 
+            @include large-mobile {
+                grid-template-rows: 70% 28%;
+                grid-gap: 2%;
+            }
 
-                img {
-                    @include add-testing-border;
-                    width: 48px;
-                    position: absolute;
-                    @include vertically-centered;
-                    left: 4px;
+            
+
+            .basicDetails {
+                //@include add-testing-border;
+                width: 98%;
+                border-color: red;
+                
+                @include iPad-pro-11 {
+                    margin: 0 auto;
                 }
 
-                p {
-                    @include add-testing-border;
-                    font-family: $secondary-font;
-                    font-size: 14px;
-                    color: #FFFF;
-                    position: absolute;
-                    @include vertically-centered;
-                    right: 4px;
-                    width: 80%;
+
+                .basicDetail {
+                    //@include add-testing-border;
+                    border-color: green;
+                    height: 56px;
+                    width: 394px;
+                    margin-top: 25px;
+                    display: grid;
+                    grid-template-columns: 15% 85%;
+                    position: relative;
+                    max-width: 95%;
+                    max-height: 30%;
+
+                    @include iPad-pro-11 {
+                        margin: 25px auto 0 auto;
+                    }
+
+                    @include large-mobile{
+                        width: 94%;
+                        margin-top: 20px;
+                        grid-template-columns: 20% 80%;
+                    }
+
+                    @include mobile {
+                        margin-top: 16px;
+                    }
+
+                   
+            
+    
+                    img {
+                        //@include add-testing-border;
+                        width: 48px;
+                        position: absolute;
+                        @include vertically-centered;
+                        left: 4px;
+
+                        @include large-mobile{
+                            width: 36px;
+                        }
+                    }
+    
+                    p {
+                        //@include add-testing-border;
+                        font-family: $secondary-font;
+                        font-size: 14px;
+                        color: #FFFF;
+                        position: absolute;
+                        @include vertically-centered;
+                        right: 4px;
+                        width: 80%;
+                        
+                        @include large-mobile {
+                            font-size: 12px;
+                            right: 0px;
+                        }
+
+                        @include small-mobile {
+                            font-size: 11px;
+                            width: 78%;
+                        }
+                    }
                 }
             }
+
+            
 
 
 
             .socialLinks {
-                @include add-testing-border;
+                //@include add-testing-border;
                 font-size: 20px;
                 font-family: $secondary-font;
                 color: white;
+                max-width: 95%;
+
+                @include iPad-pro-11 {
+                    margin: 0 auto;
+                }
+
+                @include iPad-pro-11 {
+                    font-size: 16px;
+                }
 
                 h3 {
                     font-weight: 400;
                     margin-bottom: 20px;
+
+                    @include iPad-pro-11 {
+                        text-align: center;
+                    }  
+                    
+                    @include large-mobile {
+                        font-size: 16px;
+                    }
+
+                    @include small-mobile {
+                        font-size: 14px;
+                    }
                 }
 
                 .socialButtons {
-                    @include add-testing-border;
-                    width: auto;
+                    //@include add-testing-border;
+                    width: 95%;
                     display: flex;
                     flex-direction: row;
+
+                    @include iPad-pro-11 {
+                        text-align: center;
+                        margin: 0 auto;
+                        width: auto;
+                        justify-content: center;
+                    }
 
                     img {
                         width: 48px;
                         margin-right: 20px;
+
+                        @include iPad-pro-11 {
+                            margin: 0 10px;
+                        }
+
+                        @include large-mobile{
+                            width: 36px;
+                        }
                     }
                 }
             }
         }
-        
     }
 }
