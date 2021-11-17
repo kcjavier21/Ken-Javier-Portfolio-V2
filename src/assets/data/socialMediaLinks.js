@@ -1,11 +1,11 @@
 const facebook = require('../images/svg/Facebook.svg');
-const linkedin = require('../images/svg/Linkedin.svg');
-const github = require('../images/svg/Github.svg');
+const lin = require('../images/svg/lin.svg');
+const gh = require('../images/svg/gh.svg');
 const instagram = require('../images/svg/Instagram.svg');
 
 const facebook2 = require('../images/svg/FacebookBlue.svg');
-const linkedin2 = require('../images/svg/LinkedinBlue.svg');
-const github2 = require('../images/svg/GithubBlue.svg');
+const lin2 = require('../images/svg/linBlue.svg');
+const gh2 = require('../images/svg/ghBlue.svg');
 const instagram2 = require('../images/svg/InstagramBlue.svg');
 
 const location = require('../images/svg/LocationBlue.svg');
@@ -21,14 +21,14 @@ const socialMediaLinks = [
     },
     {
         site: "LinkedIn",
-        image: linkedin,
-        image2: linkedin2,
+        image: lin,
+        image2: lin2,
         link: "https://www.linkedin.com/in/kcjavier21/" 
     },
     {
         site: "GitHub",
-        image: github,
-        image2: github2,
+        image: gh,
+        image2: gh2,
         link: "https://github.com/kcjavier21" 
     },
     {
