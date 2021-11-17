@@ -8,9 +8,9 @@
     background-position: center;
     position: relative;
     overflow: hidden;
+    max-height: 900px;
 
     @include iPad-pro-12 {
-
         @media(min-height: 1350px) {
             height: 60vh;
         }

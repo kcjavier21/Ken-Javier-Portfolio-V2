@@ -147,6 +147,13 @@ h1, h2, h3, h4, h5 {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.navbar .nav-contents .nav-links li:hover {
+  color: #92D7FB;
 }
 
 @media (max-width: 1024px) {
@@ -265,10 +272,31 @@ h1, h2, h3, h4, h5 {
   color: #FF986B;
 }
 
-#contact {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  min-height: 95vh;
+.footer {
+  height: 4em;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  background: black;
+  color: #92D7FB;
+  position: relative;
+}
+
+.footer p {
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 800px;
+  max-width: 90%;
+  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */

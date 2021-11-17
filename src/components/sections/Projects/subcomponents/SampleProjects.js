@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useSwipeable } from 'react-swipeable';
 
 // === DATA ====
-import { sampleProjects } from '../../../../assets/data/projects';
+// import { sampleProjects } from '../../../../assets/data/projects';
 
 const query = graphql`
 {

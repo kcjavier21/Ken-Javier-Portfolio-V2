@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5 {
             flex-direction: row;
             text-decoration: none;
             list-style-type: none;
+            
 
            i {
                font-size: 28px;
@@ -117,6 +118,12 @@ h1, h2, h3, h4, h5 {
                 font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
+                cursor: pointer;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    color: $light-blue;
+                }
 
                 @include medium {
                     font-size: 14px;
@@ -213,6 +220,31 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+
+.footer {
+    //@include add-testing-border;
+    height: 4em;
+    font-size: 14px;
+    font-family: $main-font;
+    background: black;
+    color: $light-blue;
+    position: relative;
+
+
+    p {
+        //@include add-testing-border;
+        @include vertically-centered;
+        @include absolutely-centered;
+        position: absolute;
+        text-align: center;
+        width: 800px;
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+
+
 // #home {
 //     //@include add-testing-border;
 //     //min-height: 95vh;
@@ -233,10 +265,10 @@ h1, h2, h3, h4, h5 {
 //     min-height: 95vh;
 // }
 
-#contact {
-    @include add-testing-border;
-    min-height: 95vh;
-}
+// #contact {
+//     //@include add-testing-border;
+//     min-height: 95vh;
+// }
 
 
 

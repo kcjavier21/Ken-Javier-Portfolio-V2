@@ -305,6 +305,32 @@
                     }
                 }
 
+                .Next {
+                    width: 85%;
+                    height: 90px;
+                    object-fit: cover;
+
+                    @include iMac {
+                        max-width: 94%;
+                        //background: black;
+                    }
+
+                    // @include iPad-pro-11 {
+                    //     height: 75px;
+                    //     //background: black;
+                    // }
+
+                    @include iPad-pro-11 {
+                        height: 75px;
+                        //background: black;
+                    }
+
+                    @include large-mobile {
+                        height: 56px;
+                        //background: black;
+                    }
+                }
+
                 
         
                 p {

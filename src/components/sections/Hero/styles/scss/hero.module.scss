@@ -7,8 +7,10 @@
     height: 100vh;
     background-image: url("../../../../../assets/images/jpg-png/background.png");
     background-position: center;
+    // background-repeat: repeat-x;
     position: relative;
     overflow: hidden;
+    max-height: 1100px;
 
     .shade {
         ////@include add-testing-border;
@@ -28,7 +30,7 @@
 
     .heroImage {
         //@include add-testing-border;
-        height: 90vh;
+        height: 90%;
         position: absolute;
         bottom: 0px;
         right: 8%;
@@ -36,8 +38,6 @@
         @include HD {
             right: 1%;
         }
-
-     
 
         @include iMac {
             @media(max-height: 725px) {
@@ -321,7 +321,7 @@
                 justify-content: center;
             }
 
-            button {
+            button, a {
                 height: 48px;
                 width: 180px;
                 font-family: $secondary-font;
@@ -330,6 +330,10 @@
                 margin-right: 16px;
                 border-radius: 10px;
                 border:none;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
 
                 @include medium {
                     height: 36px;
@@ -360,14 +364,31 @@
             .seeMyWork {
                 background: $orange;
                 color: black;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background: #ff7e46;
+                }
             }
 
             .getMyResume { 
-                @include add-border;
-                border-color: $orange;
-                border-width: 3px;
+                @include add-border(solid, 3px, $orange, auto);
                 background: #0F0F0F;
                 color: $orange;
+                line-height: 2.8em;
+                text-decoration: none;
+                vertical-align: middle;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+
+                @include medium {
+                    line-height: 2.3em;
+                }
+
+                @include mobile {
+                    line-height: 2.5em;
+                }
 
                 @include iPad-pro-11 {
                     border-width: 2px;

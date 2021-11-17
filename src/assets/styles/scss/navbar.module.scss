@@ -30,6 +30,19 @@
         position: relative;
         height: 100%;
 
+        @include HD {
+            margin: 0 10vw;
+        }
+
+        @include iMac {
+            margin: 0 12vw;
+        }
+
+        @include iPad-pro-11 {
+            margin: 0 10vw;
+        }
+
+
         img {
             //@include add-testing-border;
             @include vertically-centered;
@@ -53,31 +66,20 @@
                 height: 36px;
             }
         }
-
-        @include HD {
-            margin: 0 10vw;
-        }
-
-        @include iMac {
-            margin: 0 12vw;
-        }
-
-        @include iPad-pro-11 {
-            margin: 0 10vw;
-        }
-        
     
         .nav-links {
             //@include add-testing-border;
             @include vertically-centered;
             border-color: white;
             color: white;
-            position: absolute;
-            right: 0px;
+            cursor: pointer;
             display: flex;
             flex-direction: row;
-            text-decoration: none;
             list-style-type: none;
+            position: absolute;
+            right: 0px;
+            text-decoration: none;
+            font-size: 40px;
 
            i {
                font-size: 28px;
@@ -90,12 +92,11 @@
                @include mobile {
                     font-size: 20px;
                 }
-
-
            }
     
             li {
                 //@include add-testing-border;
+                cursor: pointer;
                 font-family: $secondary-font;
                 border-color: white;
                 width: 96px;
@@ -104,6 +105,9 @@
                 font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
+                font-size: 40px;
+                
+                
 
                 @include medium {
                     font-size: 14px;

@@ -11,7 +11,6 @@ import { socialMediaLinks, basicContactDetails } from '../../../assets/data/soci
 
 toast.configure();
 
-
 export default class Contact extends Component {
     state = {
         contact: {
@@ -123,11 +122,11 @@ export default class Contact extends Component {
                         value={this.state.contact.message}
                         onChange={this.handleChange}
                         name="message" 
-                        id={styles.message} 
+                        id="message" 
                         placeholder="Message"
                     />
 
-                    <input type="submit" id={styles["submit-btn"]} className={styles.submitBtn} value="Send"/>   
+                    <input type="submit" id="submit-btn" className={styles.submitBtn} value="Send"/>   
 
 
                 </form>

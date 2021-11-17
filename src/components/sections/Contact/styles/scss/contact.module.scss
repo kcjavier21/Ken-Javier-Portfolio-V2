@@ -11,14 +11,15 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border: 1px solid $light-blue;
-  -webkit-text-fill-color: $light-blue;
-  -webkit-box-shadow: 0 0 0px 1000px $dark-blue inset;
+  -webkit-box-shadow: 0 0 0 30px $dark-blue inset !important;
+   -webkit-text-fill-color: white;
   transition: background-color 5000s ease-in-out 0s;
+  background-color: black;
 }
 
 
 .contact {
-    ////@include add-testing-border;
+    //@include add-testing-border;
     //height: 85vh;
     background: $blue;
     background-position: center;
@@ -126,9 +127,6 @@ select:-webkit-autofill:focus {
                 }
 
                 
-
-                
-
                 &:focus {
                     outline: none !important;
                     box-shadow: 0 0 5px #0f83ff;

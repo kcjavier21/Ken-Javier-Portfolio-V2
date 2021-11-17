@@ -4,6 +4,7 @@
   background-position: center;
   position: relative;
   overflow: hidden;
+  max-height: 1100px;
 }
 
 .heroSection .shade {
@@ -19,14 +20,14 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .shade {
     background: rgba(0, 0, 0, 0.55);
   }
 }
 
 .heroSection .heroImage {
-  height: 90vh;
+  height: 90%;
   position: absolute;
   bottom: 0px;
   right: 8%;
@@ -81,7 +82,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .heroImage {
     height: auto;
     right: -34vw;
@@ -89,7 +90,7 @@
   }
 }
 
-@media (max-width: 535px) and (max-height: 840px) {
+@media (max-width: 542px) and (max-height: 840px) {
   .heroSection .heroImage {
     height: auto;
     right: -30vw;
@@ -97,7 +98,7 @@
   }
 }
 
-@media (max-width: 535px) and (max-height: 780px) {
+@media (max-width: 542px) and (max-height: 780px) {
   .heroSection .heroImage {
     height: auto;
     right: -10vw;
@@ -105,7 +106,7 @@
   }
 }
 
-@media (max-width: 535px) and (max-height: 740px) {
+@media (max-width: 542px) and (max-height: 740px) {
   .heroSection .heroImage {
     height: auto;
     right: -20vw;
@@ -162,7 +163,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -219,7 +220,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart h3 {
     font-size: 20px;
   }
@@ -268,7 +269,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart h1 {
     font-size: 42px;
   }
@@ -302,7 +303,7 @@
           flex-direction: row;
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart .socialButtons {
     margin: 30px auto 0 auto;
     -webkit-box-pack: center;
@@ -318,7 +319,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart .socialButtons a {
     margin: 0 10px;
     padding: 0;
@@ -347,7 +348,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart .socialButtons a img {
     height: 36px;
   }
@@ -376,7 +377,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 542px) {
   .heroSection .leftPart .buttonContainer {
     height: auto;
     display: -webkit-box;
@@ -388,7 +389,7 @@
   }
 }
 
-.heroSection .leftPart .buttonContainer button {
+.heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
   height: 48px;
   width: 180px;
   font-family: "Poppins", sans-serif;
@@ -397,29 +398,33 @@
   margin-right: 16px;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media (max-width: 1024px) {
-  .heroSection .leftPart .buttonContainer button {
+  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     height: 36px;
     width: 140px;
   }
 }
 
 @media (max-width: 834px) {
-  .heroSection .leftPart .buttonContainer button {
+  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     font-size: 14px;
   }
 }
 
-@media (max-width: 535px) {
-  .heroSection .leftPart .buttonContainer button {
+@media (max-width: 542px) {
+  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     margin: 0 6px;
   }
 }
 
 @media (max-width: 414px) {
-  .heroSection .leftPart .buttonContainer button {
+  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     width: 40%;
     height: 9.2vw;
     font-size: 3.2vw;
@@ -429,7 +434,7 @@
 }
 
 @media (min-width: 530px) and (max-height: 730px) {
-  .heroSection .leftPart .buttonContainer button {
+  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     font-size: 12px;
   }
 }
@@ -437,16 +442,44 @@
 .heroSection .leftPart .buttonContainer .seeMyWork {
   background: #FF986B;
   color: black;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.heroSection .leftPart .buttonContainer .seeMyWork:hover {
+  background: #ff7e46;
 }
 
 .heroSection .leftPart .buttonContainer .getMyResume {
   border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  border-color: #FF986B;
   border-width: 3px;
+  border-color: #FF986B;
+  border-radius: auto;
   background: #0F0F0F;
   color: #FF986B;
+  line-height: 2.8em;
+  text-decoration: none;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .heroSection .leftPart .buttonContainer .getMyResume {
+    line-height: 2.3em;
+  }
+}
+
+@media (max-width: 414px) {
+  .heroSection .leftPart .buttonContainer .getMyResume {
+    line-height: 2.5em;
+  }
 }
 
 @media (max-width: 834px) {

@@ -47,10 +47,8 @@ const Navbar = (props) => {
         setBurgerMenuIsActive(!burgerMenuIsActive);
     }
 
-    const generateToggleNavbar = () => {
+    const renderToggleNavbar = () => {
         let style = toggleNavbarIsActive ? 'active' : '';
-
-
         // console.log("SCROLL POSITION: " + scrollPosition.toFixed(4));
 
         return <div className={`sidebar ${style}`}>
@@ -65,7 +63,7 @@ const Navbar = (props) => {
     }
 
 
-    const generateNavbar = () => {
+    const renderNavbar = () => {
         let activeStyle = scrollPosition > 0.15 ? 'active' : '';
 
         return <nav className={`navbar ${activeStyle}`}>
@@ -86,9 +84,9 @@ const Navbar = (props) => {
 
     return (
         <div>
-            { generateNavbar() }
+            { renderNavbar() }
 
-            { props.innerWidth <= 768 ? generateToggleNavbar() : <></> }
+            { props.innerWidth <= 768 ? renderToggleNavbar() : <></> }
 
         </div>
     )

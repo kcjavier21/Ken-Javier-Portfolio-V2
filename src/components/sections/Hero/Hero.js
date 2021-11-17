@@ -5,6 +5,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // ==== DATA ======
 import { socialMediaLinks } from '../../../assets/data/socialMediaLinks';
+import resume from "../../../assets/data/KenJavierResume2021.pdf";
 
 const Hero = () => {
 
@@ -24,6 +25,7 @@ const Hero = () => {
     
     // ==== Determines the width of the website ====
     const getInnerWidth = () => {
+        console.log("Hello");
         setInnerWidth(window.innerWidth);
     };
 
@@ -46,8 +48,9 @@ const Hero = () => {
 
                 {/* === Buttons to Projects and Resume */}
                 <div className={styles.buttonContainer}>
-                    <button onClick={() => scrollTo(`#projects`)} className={styles.seeMyWork} >See My Work</button>
-                    <button onClick={() => scrollTo(`#projects`)} className={styles.getMyResume}>Get My Resume</button>
+                    <button onClick={() => scrollTo(`#projects`)} className={styles.seeMyWork}>See My Work</button>
+                    {/* <button onClick={() => scrollTo(`#projects`)} className={styles.getMyResume}><a href={resume} download="Ken-Javier-Resume-2021"/>Get My Resume</button> */}
+                    <a href={resume} target="_blank" className={styles.getMyResume}>Get My Resume</a>
                 </div>
             </div>
 
