@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 import Layout from "../components/Layout"
 import "../assets/styles/css/main.css"
 import "../assets/styles/css/all.min.css"
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     
         <Layout innerWidth={innerWidth}>
-            <SEO/>
+            <Seo/>
                 <div id="home">
                     <Hero />
                 </div>

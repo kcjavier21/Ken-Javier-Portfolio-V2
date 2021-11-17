@@ -50,7 +50,7 @@ const Hero = () => {
                 <div className={styles.buttonContainer}>
                     <button onClick={() => scrollTo(`#projects`)} className={styles.seeMyWork}>See My Work</button>
                     {/* <button onClick={() => scrollTo(`#projects`)} className={styles.getMyResume}><a href={resume} download="Ken-Javier-Resume-2021"/>Get My Resume</button> */}
-                    <a href={resume} target="_blank" className={styles.getMyResume}>Get My Resume</a>
+                    <a href={resume} target="_blank"  rel="noreferrer" className={styles.getMyResume}>Get My Resume</a>
                 </div>
             </div>
 
