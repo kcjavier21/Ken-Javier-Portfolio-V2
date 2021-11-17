@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import ReactLoading from "react-loading"
 import Loader from "react-loader-spinner"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
