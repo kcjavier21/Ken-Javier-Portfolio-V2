@@ -64,7 +64,7 @@ const Navbar = (props) => {
 
 
     const renderNavbar = () => {
-        let activeStyle = scrollPosition > 0.15 ? 'active' : '';
+        let activeStyle = scrollPosition > 0.05 ? 'active' : '';
 
         return <nav className={`navbar ${activeStyle}`}>
                     <div className="nav-contents">
