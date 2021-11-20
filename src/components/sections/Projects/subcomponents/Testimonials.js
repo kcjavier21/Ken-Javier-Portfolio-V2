@@ -60,12 +60,12 @@ const Testimonials = (props) => {
         return <>
                     {/* === Left Button ==== */}
                     <i className={`fas fa-arrow-circle-left ${styles.left}`} role="presentation" 
-                            onKeyDown={handleClick} onClick={() => { slideNumber <= nodes.length  && slideNumber >= 1 ? 
+                            onKeyDown={handleClick} onClick={() => { slideNumber <= nodes.length && slideNumber >= 1 ? 
                             setSlideNumber(slideNumber - 2) : noMoreClicking() }}/>
                     
                     {/* ==== Right Button ==== */}
                     <i className={`fas fa-arrow-circle-right ${styles.right}`} role="presentation" 
-                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length-1 ? 
+                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length - 2 ? 
                         setSlideNumber(slideNumber + 2) : noMoreClicking() }}/>  
                 </>
     }
@@ -81,7 +81,7 @@ const Testimonials = (props) => {
                     
                     {/* ==== Right Button ==== */}
                     <i className={`fas fa-arrow-circle-right ${styles.right}`} role="presentation" 
-                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length-1 ? 
+                        onKeyDown={handleClick} onClick={() => { slideNumber < nodes.length - 1 ? 
                         setSlideNumber(slideNumber + 1) : noMoreClicking() }}/>  
                 </>
     }
