@@ -87,6 +87,7 @@ const Testimonials = (props) => {
     }
 
 
+    
     let counter = 0;
 
     const generateSlideBeadsForLargeDevices = (index) => {
