@@ -3,14 +3,16 @@ const css = require('../images/svg/CSS.svg');
 const sass = require('../images/svg/Sass.svg');
 const bootstrap = require('../images/svg/Bootstrap.svg');
 const javaScript = require('../images/svg/JS.svg');
+const typeScript = require('../images/svg/TS.svg')
 const git = require('../images/svg/Git.svg');
 const react = require('../images/svg/React.svg');
 const gatsby = require('../images/svg/Gatsby.svg');
-// const graphQL = require('../images/svg/GraphQL.svg');
+const graphQL = require('../images/svg/GraphQL.svg');
 const next = require('../images/svg/Next.svg');
 const node = require('../images/svg/Node.svg');
 const express = require('../images/svg/Express.svg');
 const mongoDB = require('../images/svg/MongoDB.svg');
+const firebase = require('../images/svg/Firebase.svg');
 const photoshop = require('../images/svg/Photoshop.svg');
 const illustrator = require('../images/svg/Illustrator.svg');
 const figma = require('../images/svg/Figma.svg');
@@ -51,6 +53,7 @@ const devTools = [
     { name: "Sass", image: sass },
     { name: "Bootstrap", image: bootstrap },
     { name: "JavaScript", image: javaScript },
+    { name: "TypeScript", image: typeScript },
     { name: "Git", image: git },
     { name: "React", image: react },
     { name: "Gatsby", image: gatsby },
@@ -58,6 +61,8 @@ const devTools = [
     { name: "Node", image: node },
     { name: "Express", image: express },
     { name: "MongoDB", image: mongoDB },
+    { name: "Firebase", image: firebase },
+    { name: "GraphQL", image: graphQL },
 ];
 
 const designTools = [
