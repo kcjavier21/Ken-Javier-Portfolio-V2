@@ -10,7 +10,7 @@ import matrix from "../../../../assets/images/jpg-png/Matrix-Co.png"
 
 const query = graphql`
   {
-    allContentfulTestimonials(sort: { order: DESC, fields: contentful_id }) {
+    allContentfulTestimonials(sort: { order: DESC, fields: updatedAt }) {
       nodes {
         attestantName
         attestantPosition
