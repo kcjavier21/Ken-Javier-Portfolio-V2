@@ -11,6 +11,7 @@ const graphQL = require('../images/svg/GraphQL.svg');
 const next = require('../images/svg/Next.svg');
 const node = require('../images/svg/Node.svg');
 const express = require('../images/svg/Express.svg');
+const springBoot = require('../images/svg/SpringBoot.svg');
 const mongoDB = require('../images/svg/MongoDB.svg');
 const firebase = require('../images/svg/Firebase.svg');
 const photoshop = require('../images/svg/Photoshop.svg');
@@ -60,6 +61,7 @@ const devTools = [
     { name: "Next", image: next },
     { name: "Node", image: node },
     { name: "Express", image: express },
+    { name: "Spring Boot", image: springBoot },
     { name: "MongoDB", image: mongoDB },
     { name: "Firebase", image: firebase },
     { name: "GraphQL", image: graphQL },
