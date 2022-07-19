@@ -3,10 +3,12 @@ import * as styles from "../styles/css/testimonials.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
+import fieldworkStudio from "../../../../assets/images/jpg-png/FieldworkStudio.png"
 import algoFilipino from "../../../../assets/images/jpg-png/AlgoFilipino.png"
 import gdsc from "../../../../assets/images/jpg-png/GDSC.png"
 import plmcss from "../../../../assets/images/jpg-png/PLM CSS.png"
 import matrix from "../../../../assets/images/jpg-png/Matrix-Co.png"
+import dashlabs from "../../../../assets/images/jpg-png/DashlabsAI.png"
 
 const query = graphql`
   {
@@ -35,11 +37,13 @@ const Testimonials = props => {
 
   const organizations = [
     { name: "Algo Filipino", image: algoFilipino, className: "algoFilipino" },
+    { name: "Fieldwork Studio", image: fieldworkStudio, className: "fieldworkStudio" },
     {
       name: "Google Developer Students Club - Pamantasan ng Lungsod ng Maynila",
       image: gdsc,
       className: "gdsc",
     },
+    { name: "Dashlabs.ai", image: dashlabs, className: "dashlabs" },
     {
       name: "PLM Computer Science Society",
       image: plmcss,

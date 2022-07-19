@@ -22,10 +22,9 @@ const Hero = () => {
             window.removeEventListener('resize', getInnerWidth);
         }
     }, []);
-    
+
     // ==== Determines the width of the website ====
     const getInnerWidth = () => {
-        console.log("Hello");
         setInnerWidth(window.innerWidth);
     };
 
@@ -33,35 +32,35 @@ const Hero = () => {
     return (
         <div className={styles.heroSection}>
             <div className={styles.leftPart}>
-                { innerWidth > 535 ? <> <h3>Hello, My name is Ken!</h3>
-                                        <h1>I am a <span>Web Developer</span></h1> </> 
-                                        : <> <h3>Hello, My name is Ken! I am a</h3>
-                                        <h1><span>Web Developer</span></h1> </>              
-                 }
-                
+                {innerWidth > 535 ? <> <h3>Hello, My name is Ken!</h3>
+                    <h1>I am a <span>Web Developer</span></h1> </>
+                    : <> <h3>Hello, My name is Ken! I am a</h3>
+                        <h1><span>Web Developer</span></h1> </>
+                }
+
                 {/* === Buttons of Social Networking sites ====*/}
                 <div className={styles.socialButtons}>
-                    { socialMediaLinks.map((item) => <a href={item.link} target="_blank" rel="noreferrer" key={item.site}>
-                            <img src={item.image.default} alt={`Ken Javier on ${item.site}`} /></a>
-                    )}                    
+                    {socialMediaLinks.map((item) => <a href={item.link} target="_blank" rel="noreferrer" key={item.site}>
+                        <img src={item.image.default} alt={`Ken Javier on ${item.site}`} /></a>
+                    )}
                 </div>
 
                 {/* === Buttons to Projects and Resume */}
                 <div className={styles.buttonContainer}>
                     <button onClick={() => scrollTo(`#projects`)} className={styles.seeMyWork}>See My Work</button>
                     {/* <button onClick={() => scrollTo(`#projects`)} className={styles.getMyResume}><a href={resume} download="Ken-Javier-Resume-2021"/>Get My Resume</button> */}
-                    <a href={resume} target="_blank"  rel="noreferrer" className={styles.getMyResume}>Get My Resume</a>
+                    <a href={resume} target="_blank" rel="noreferrer" className={styles.getMyResume}>Get My Resume</a>
                 </div>
             </div>
 
             {/* === Will Emphasize the Text Area of Hero Section when the inner width gets smaller ==== */}
-            <div className={styles.shade}/>
+            <div className={styles.shade} />
 
             {/* === Hero Image==== */}
             <img className={styles.heroImage} src={myPhoto}
                 alt="Ken Javier" placeholder="blurred"
             />
-            
+
         </div>
     )
 }

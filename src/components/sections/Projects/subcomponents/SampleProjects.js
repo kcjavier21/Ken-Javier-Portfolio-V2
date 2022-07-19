@@ -10,7 +10,7 @@ import { useSwipeable } from 'react-swipeable';
 
 const query = graphql`
 {
-  allContentfulSampleProjects(sort: {order: ASC, fields: updatedAt}) {
+  allContentfulSampleProjects(sort: {order: DESC, fields: updatedAt}) {
     nodes {
       id
       title

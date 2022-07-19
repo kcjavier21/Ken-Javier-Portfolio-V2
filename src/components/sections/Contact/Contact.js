@@ -14,7 +14,7 @@ toast.configure();
 export default class Contact extends Component {
     state = {
         contact: {
-            name:'',
+            name: '',
             email: '',
             contactNumber: '',
             company: '',
@@ -27,7 +27,7 @@ export default class Contact extends Component {
         email: Joi.string().email().required().label('Email'),
         contactNumber: Joi.string().required().label('Contact number'),
         company: Joi.string().required().label('Company or organization'),
-        message: Joi.string().required().label('Message'),   
+        message: Joi.string().required().label('Message'),
     };
 
     validate = () => {
@@ -48,7 +48,8 @@ export default class Contact extends Component {
 
     sendEmail = (e) => {
         e.preventDefault();
-        
+        console.log(e.target);
+
         let result = this.validate();
 
         if (result.error != null) {
@@ -65,33 +66,33 @@ export default class Contact extends Component {
         //     autoClose: 2000
         // });
 
-        emailjs.sendForm('service_zlxigxu', 'template_kenjavier', e.target, 'user_CCaTeZZghXzAEj0VhC8VU')
-          .then((result) => {
-              console.log(result.text);
-              toast.success('Email Sent!', {
-                className: "custom-toast",
-                position: toast.POSITION.TOP_CENTER,
-                autoClose: 3000
-              });
+        emailjs.sendForm('service_jrjyptd', 'template_kenjavier', e.target, 'user_CCaTeZZghXzAEj0VhC8VU')
+            .then((result) => {
+                console.log(result.text);
+                toast.success('Email Sent!', {
+                    className: "custom-toast",
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 3000
+                });
 
-            this.resetState();
+                this.resetState();
 
-          }, (error) => {
-              console.log(error.text);
-              toast.error('Error sending email!', {
-                position: toast.POSITION.TOP_CENTER,
-                autoClose: 3000
+            }, (error) => {
+                console.log(error.text);
+                toast.error('Error sending email!', {
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 3000
+                });
             });
-          }); 
-      };
+    };
 
-      handleChange = (e) => {
-          let contact = { ...this.state.contact };
-          contact[e.currentTarget.name] = e.currentTarget.value;
-          this.setState({ contact });
-      };
+    handleChange = (e) => {
+        let contact = { ...this.state.contact };
+        contact[e.currentTarget.name] = e.currentTarget.value;
+        this.setState({ contact });
+    };
 
-      inputs = [
+    inputs = [
         { value: 'name', placeHolder: 'Name' },
         { value: 'email', placeHolder: 'Email' },
         { value: 'contactNumber', placeHolder: 'Phone Number' },
@@ -102,58 +103,58 @@ export default class Contact extends Component {
     render() {
         return (
             <div className={styles.contact}>
-            <h1>Keep In Touch</h1>
-            
-
-            <div className={styles.formAndDetailsContainer}>
-                <form onSubmit={this.sendEmail} className={styles.form} autoComplete="off">
-
-                    { this.inputs.map(item =>
-                    <input 
-                        value={this.state.contact[item.value]}
-                        onChange={this.handleChange}
-                        type="text" 
-                        name={item.value} 
-                        key={item.value}
-                        placeholder={item.placeHolder}/> 
-                    )}
-
-                    <textarea 
-                        value={this.state.contact.message}
-                        onChange={this.handleChange}
-                        name="message" 
-                        id="message" 
-                        placeholder="Message"
-                    />
-
-                    <input type="submit" id="submit-btn" className={styles.submitBtn} value="Send"/>   
+                <h1>Keep In Touch</h1>
 
 
-                </form>
+                <div className={styles.formAndDetailsContainer}>
+                    <form onSubmit={this.sendEmail} className={styles.form} autoComplete="off">
 
-                <div className={styles.contactDetails}>
-                    <div className={styles.basicDetails}>
-                        
-                        { basicContactDetails.map((item => 
-                            <div className={styles.basicDetail} key={item.name}>
-                                <img src={item.image.default} alt={item.name} />
-                                <p>{item.details}</p>
+                        {this.inputs.map(item =>
+                            <input
+                                value={this.state.contact[item.value]}
+                                onChange={this.handleChange}
+                                type="text"
+                                name={item.value}
+                                key={item.value}
+                                placeholder={item.placeHolder} />
+                        )}
+
+                        <textarea
+                            value={this.state.contact.message}
+                            onChange={this.handleChange}
+                            name="message"
+                            id="message"
+                            placeholder="Message"
+                        />
+
+                        <input type="submit" id="submit-btn" className={styles.submitBtn} value="Send" />
+
+
+                    </form>
+
+                    <div className={styles.contactDetails}>
+                        <div className={styles.basicDetails}>
+
+                            {basicContactDetails.map((item =>
+                                <div className={styles.basicDetail} key={item.name}>
+                                    <img src={item.image.default} alt={item.name} />
+                                    <p>{item.details}</p>
+                                </div>
+                            ))}
+
+                        </div>
+                        <div className={styles.socialLinks}>
+                            <h3>Social Links</h3>
+
+                            <div className={styles.socialButtons}>
+                                {socialMediaLinks.map((item) => <a href={item.link} target="_blank" rel="noreferrer" key={item.site}>
+                                    <img src={item.image2.default} alt={`Ken Javier on ${item.site}`} /></a>
+                                )}
                             </div>
-                        ))}
-                       
-                    </div>
-                    <div className={styles.socialLinks}>
-                        <h3>Social Links</h3>
-                        
-                        <div className={styles.socialButtons}>
-                            { socialMediaLinks.map((item) => <a href={item.link} target="_blank" rel="noreferrer" key={item.site}>
-                                <img src={item.image2.default} alt={`Ken Javier on ${item.site}`} /></a>
-                            )}     
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         )
     }
 }

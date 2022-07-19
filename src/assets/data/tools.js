@@ -20,7 +20,7 @@ const figma = require('../images/svg/Figma.svg');
 const canva = require('../images/svg/Canva.svg');
 
 const webDev = require('../images/svg/WebDev.svg');
-const webDesign = require('../images/svg/WebDesign.svg');
+const serverSideDev = require('../images/svg/ServerSideDev.svg');
 const uiuxDesign = require('../images/svg/UI-UXDesign.svg');
 
 
@@ -33,15 +33,15 @@ const servicesList = [
     },
 
     { 
-        name: "Web Design",
-        description: "Have a stylish, responsive, and mobile-friendly website and web applications made with top and powerful tech tools!",
-        image: webDesign,
+        name: "Server-side Development",
+        description: "Fast, optimized, and secured server-side application for your web or mobile application.",
+        image: serverSideDev,
         alternative: "Ken Javier can design websites and web apps for you."
     },
 
     { 
         name: "UI/UX Design",
-        description: "Have a stylish, responsive, and mobile-friendly website and web applications made with top and powerful tech tools!",
+        description: "Need prototype for your web and mobile application? Don't worry because I still got you!",
         image: uiuxDesign,
         alternative: "Ken Javier can design user interfaces for you."
     }
