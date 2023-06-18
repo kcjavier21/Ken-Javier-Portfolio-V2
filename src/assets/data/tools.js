@@ -2,6 +2,8 @@ const html = require('../images/svg/HTML.svg');
 const css = require('../images/svg/CSS.svg');
 const sass = require('../images/svg/Sass.svg');
 const bootstrap = require('../images/svg/Bootstrap.svg');
+const mui = require('../images/svg/MaterialUI.svg');
+const mantine = require('../images/svg/Mantine.svg');
 const javaScript = require('../images/svg/JS.svg');
 const typeScript = require('../images/svg/TS.svg')
 const git = require('../images/svg/Git.svg');
@@ -53,6 +55,8 @@ const devTools = [
     { name: "CSS", image: css },
     { name: "Sass", image: sass },
     { name: "Bootstrap", image: bootstrap },
+    { name: "Material UI", image: mui },
+    { name: "Mantine", image: mantine },
     { name: "JavaScript", image: javaScript },
     { name: "TypeScript", image: typeScript },
     { name: "Git", image: git },

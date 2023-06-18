@@ -23,7 +23,6 @@ select:-webkit-autofill:focus {
   padding: 0 0 80px 0;
   border-color: red;
 }
-
 .contact h1 {
   color: #FF986B;
   width: 80%;
@@ -31,70 +30,56 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   font-size: 48px;
 }
-
 @media (max-width: 1024px) {
   .contact h1 {
     font-size: 36px;
   }
 }
-
 @media (max-width: 542px) {
   .contact h1 {
     font-size: 30px;
   }
 }
-
 @media (max-width: 414px) {
   .contact h1 {
     font-size: 24px;
   }
 }
-
 .contact .formAndDetailsContainer {
   width: 986px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 48% 48%;
-      grid-template-columns: 48% 48%;
+  grid-template-columns: 48% 48%;
   margin: 80px auto 0 auto;
   max-width: 80%;
   grid-gap: 4%;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: 55% 45%;
-        grid-template-rows: 55% 45%;
+    grid-template-columns: auto;
+    grid-template-rows: 55% 45%;
     grid-gap: 0%;
     width: 680px;
     height: 1080px;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer {
-    -ms-grid-rows: 60% 40%;
-        grid-template-rows: 60% 40%;
+    grid-template-rows: 60% 40%;
     height: 900px;
   }
 }
-
 @media (max-width: 414px) {
   .contact .formAndDetailsContainer {
     max-width: 100%;
   }
 }
-
 .contact .formAndDetailsContainer .form {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #FFFF;
+  color: white;
   max-width: 99%;
   position: relative;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .form {
     text-align: center;
@@ -103,7 +88,6 @@ select:-webkit-autofill:focus {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .form {
     text-align: center;
@@ -112,13 +96,11 @@ select:-webkit-autofill:focus {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 414px) {
   .contact .formAndDetailsContainer .form {
     width: 80vw;
   }
 }
-
 .contact .formAndDetailsContainer .form input {
   border-style: solid;
   border-width: 2px;
@@ -130,34 +112,27 @@ select:-webkit-autofill:focus {
   background: #101E25;
   max-width: 96% !important;
   padding: 0 8px;
-  color: #FFFF;
-  -webkit-transition: 300ms ease-in-out;
+  color: white;
   transition: 300ms ease-in-out;
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .form input {
     height: 32px;
     font-size: 12px;
   }
 }
-
 @media (max-width: 414px) {
   .contact .formAndDetailsContainer .form input {
     width: 75vw;
   }
 }
-
 .contact .formAndDetailsContainer .form input:focus {
   outline: none !important;
-  -webkit-box-shadow: 0 0 5px #0f83ff;
-          box-shadow: 0 0 5px #0f83ff;
+  box-shadow: 0 0 5px #0f83ff;
 }
-
 .contact .formAndDetailsContainer .form input:-webkit-autofill {
   background: #101E25 !important;
 }
-
 .contact .formAndDetailsContainer .form input.submitBtn {
   width: 160px;
   height: 40px;
@@ -165,14 +140,11 @@ select:-webkit-autofill:focus {
   border: none;
   font-weight: 600;
   color: black;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-
 .contact .formAndDetailsContainer .form input.submitBtn:hover {
   background: #d37851;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .form input.submitBtn {
     position: absolute;
@@ -180,7 +152,6 @@ select:-webkit-autofill:focus {
     right: 4%;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .form input.submitBtn {
     width: 140px;
@@ -188,7 +159,6 @@ select:-webkit-autofill:focus {
     right: 0px;
   }
 }
-
 @media (max-width: 320px) {
   .contact .formAndDetailsContainer .form input.submitBtn {
     width: 120px;
@@ -198,7 +168,6 @@ select:-webkit-autofill:focus {
     right: 0px;
   }
 }
-
 .contact .formAndDetailsContainer .form textarea {
   border-style: solid;
   border-width: 2px;
@@ -210,28 +179,22 @@ select:-webkit-autofill:focus {
   background: #101E25;
   max-width: 96%;
   padding: 8px;
-  color: #FFFF;
-  -webkit-transition: 300ms ease-in-out;
+  color: white;
   transition: 300ms ease-in-out;
   resize: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
-
 @media (max-width: 414px) {
   .contact .formAndDetailsContainer .form textarea {
     font-size: 12px;
     width: 75vw;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1.2fr 0.8fr;
-      grid-template-rows: 1.2fr 0.8fr;
+  grid-template-rows: 1.2fr 0.8fr;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails {
     width: 90%;
@@ -239,186 +202,146 @@ select:-webkit-autofill:focus {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails {
-    -ms-grid-rows: 70% 28%;
-        grid-template-rows: 70% 28%;
+    grid-template-rows: 70% 28%;
     grid-gap: 2%;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .basicDetails {
   width: 98%;
   border-color: red;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails {
     margin: 0 auto;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
   border-color: green;
   height: 56px;
   width: 394px;
   margin-top: 25px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% 85%;
-      grid-template-columns: 15% 85%;
+  grid-template-columns: 15% 85%;
   position: relative;
   max-width: 95%;
   max-height: 30%;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
     margin: 25px auto 0 auto;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
     width: 94%;
     margin-top: 20px;
-    -ms-grid-columns: 20% 80%;
-        grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 80%;
   }
 }
-
 @media (max-width: 414px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail {
     margin-top: 16px;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail img {
   width: 48px;
   position: absolute;
   margin: 0 auto;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: 200ms;
+  transform: translateY(-50%);
   transition: 200ms;
   left: 4px;
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail img {
     width: 36px;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #FFFF;
+  color: white;
   position: absolute;
   margin: 0 auto;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: 200ms;
+  transform: translateY(-50%);
   transition: 200ms;
   right: 4px;
   width: 80%;
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
     font-size: 12px;
     right: 0px;
   }
 }
-
 @media (max-width: 320px) {
   .contact .formAndDetailsContainer .contactDetails .basicDetails .basicDetail p {
     font-size: 11px;
     width: 78%;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .socialLinks {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   color: white;
   max-width: 95%;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks {
     font-size: 16px;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
   font-weight: 400;
   margin-bottom: 20px;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
     text-align: center;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
     font-size: 16px;
   }
 }
-
 @media (max-width: 320px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks h3 {
     font-size: 14px;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons {
   width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons {
     text-align: center;
     margin: 0 auto;
     width: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
-
 .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
   width: 48px;
   margin-right: 20px;
 }
-
 @media (max-width: 834px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
     margin: 0 10px;
   }
 }
-
 @media (max-width: 542px) {
   .contact .formAndDetailsContainer .contactDetails .socialLinks .socialButtons img {
     width: 36px;
   }
 }
-/*# sourceMappingURL=contact.module.css.map */

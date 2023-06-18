@@ -4,6 +4,10 @@
     border-color: black;
 }
 
+@mixin add-outline() {
+    outline: 1px solid green;
+}
+
 @mixin add-border($type, $width, $color, $radius) {
     border-style: $type;
     border-width: $width;

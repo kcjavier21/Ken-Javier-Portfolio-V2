@@ -5,7 +5,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // ==== DATA ======
 import { socialMediaLinks } from '../../../assets/data/socialMediaLinks';
-import resume from "../../../assets/data/KenJavierResume2021.pdf";
+import resume from "../../../assets/data/KenJavierResume2023.pdf";
 
 const Hero = () => {
 

@@ -9,6 +9,7 @@ import gdsc from "../../../../assets/images/jpg-png/GDSC.png"
 import plmcss from "../../../../assets/images/jpg-png/PLM CSS.png"
 import matrix from "../../../../assets/images/jpg-png/Matrix-Co.png"
 import dashlabs from "../../../../assets/images/jpg-png/DashlabsAI.png"
+import goMedia from "../../../../assets/images/svg/GoMedia.svg"
 
 const query = graphql`
   {
@@ -44,6 +45,11 @@ const Testimonials = props => {
       className: "gdsc",
     },
     { name: "Dashlabs.ai", image: dashlabs, className: "dashlabs" },
+    {
+      name: "GoMedia",
+      image: goMedia,
+      className: "gomedia",
+    },
     {
       name: "PLM Computer Science Society",
       image: plmcss,

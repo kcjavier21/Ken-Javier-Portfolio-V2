@@ -4,7 +4,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .services h1 {
   color: #FF986B;
   width: 80%;
@@ -12,60 +11,48 @@
   margin: 0 auto;
   font-size: 48px;
 }
-
 @media (max-width: 1024px) {
   .services h1 {
     font-size: 36px;
   }
 }
-
 @media (max-width: 542px) {
   .services h1 {
     font-size: 30px;
   }
 }
-
 @media (max-width: 414px) {
   .services h1 {
     font-size: 24px;
   }
 }
-
 .services .serviceCards {
   height: 300px;
   width: 1332px;
   max-width: 80%;
   margin: 80px auto 0 auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.7%;
 }
-
 @media (max-width: 1024px) {
   .services .serviceCards {
     height: 340px;
   }
 }
-
 @media (max-width: 834px) {
   .services .serviceCards {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
     height: 632px;
     grid-gap: 2%;
   }
 }
-
 @media (max-width: 414px) {
   .services .serviceCards {
     width: 90%;
   }
 }
-
 .services .serviceCards .serviceCard {
   border-style: solid;
   border-width: 4px;
@@ -74,140 +61,117 @@
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
-
 @media (max-width: 414px) {
   .services .serviceCards .serviceCard {
     border-width: 3px;
   }
 }
-
 .services .serviceCards .serviceCard img {
   display: block;
   width: 100px;
   margin: 24px auto 0 auto;
 }
-
 @media (max-width: 1024px) {
   .services .serviceCards .serviceCard img {
     width: 80px;
   }
 }
-
 @media (max-width: 834px) {
   .services .serviceCards .serviceCard img {
     margin: 20px auto 0 auto;
     width: 72px;
   }
 }
-
 @media (max-width: 542px) {
   .services .serviceCards .serviceCard img {
     margin: 12px auto 0 auto;
   }
 }
-
 @media (max-width: 414px) {
   .services .serviceCards .serviceCard img {
     width: 64px;
   }
 }
-
 .services .serviceCards .serviceCard h3 {
   margin-top: 20px;
   font-size: 24px;
   color: #FF986B;
 }
-
 @media (max-width: 1024px) {
   .services .serviceCards .serviceCard h3 {
     font-size: 20px;
   }
 }
-
 @media (max-width: 834px) {
   .services .serviceCards .serviceCard h3 {
     margin: 8px auto 0 auto;
   }
 }
-
 @media (max-width: 320px) {
   .services .serviceCards .serviceCard h3 {
     font-size: 16px;
   }
 }
-
 .services .serviceCards .serviceCard p {
   font-size: 14px;
   width: 80%;
-  color: #FFFF;
+  color: white;
   margin: 12px auto 0 auto;
 }
-
 @media (max-width: 834px) {
   .services .serviceCards .serviceCard p {
     margin: 4px auto 0 auto;
   }
 }
-
 @media (max-width: 542px) {
   .services .serviceCards .serviceCard p {
     font-size: 12px;
   }
 }
-
 @media (max-width: 414px) {
   .services .serviceCards .serviceCard p {
     width: 90%;
   }
 }
-
 @media (max-width: 320px) {
   .services .serviceCards .serviceCard p {
     font-size: 11px;
   }
 }
-
 .services .tools {
   margin: 180px auto 0 auto;
 }
-
 @media (max-width: 834px) {
   .services .tools {
     margin: 160px auto 0 auto;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools {
     margin: 140px auto 0 auto;
   }
 }
-
 .services .tools h1 {
   color: #FF986B;
   width: 80%;
   text-align: center;
   font-size: 48px;
 }
-
 @media (max-width: 1024px) {
   .services .tools h1 {
     font-size: 36px;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools h1 {
     font-size: 30px;
   }
 }
-
 @media (max-width: 414px) {
   .services .tools h1 {
     font-size: 24px;
   }
 }
-
 .services .tools h3 {
   color: #92D7FB;
   font-size: 24px;
@@ -216,158 +180,131 @@
   width: 1004px;
   max-width: 80%;
 }
-
 @media (max-width: 542px) {
   .services .tools h3 {
     font-size: 20px;
   }
 }
-
 @media (max-width: 414px) {
   .services .tools h3 {
     font-size: 16px;
   }
 }
-
 .services .tools .devTools {
   width: 1000px;
   max-width: 80%;
   margin: 16px auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   text-align: center;
 }
-
 @media (max-width: 1280px) {
   .services .tools .devTools {
     max-width: 90%;
   }
 }
-
 @media (max-width: 1030px) {
   .services .tools .devTools {
     max-width: 80%;
   }
 }
-
 @media (max-width: 834px) {
   .services .tools .devTools {
     max-width: 82%;
   }
 }
-
 .services .tools .devTools .devTool {
   width: 164px;
   height: 130px;
   margin: 0 auto 20px auto;
   position: relative;
 }
-
 @media (max-width: 1280px) {
   .services .tools .devTools .devTool {
     width: 124px;
   }
 }
-
 @media (max-width: 834px) {
   .services .tools .devTools .devTool {
     width: 20%;
     height: 112px;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools .devTools .devTool {
     width: 30%;
     height: 92px;
   }
 }
-
 @media (max-width: 320px) {
   .services .tools .devTools .devTool {
     width: 45%;
     height: 84px;
   }
 }
-
 .services .tools .devTools .devTool img {
   width: 90px;
   display: block;
   margin: 0 auto;
 }
-
 @media (max-width: 1280px) {
   .services .tools .devTools .devTool img {
     width: 85px;
   }
 }
-
 @media (max-width: 834px) {
   .services .tools .devTools .devTool img {
     width: 76px;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools .devTools .devTool img {
     width: 56px;
     max-width: 96%;
   }
 }
-
 .services .tools .devTools .devTool .Express {
   width: 85%;
   height: 90px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 @media (max-width: 1280px) {
   .services .tools .devTools .devTool .Express {
     max-width: 94%;
   }
 }
-
 @media (max-width: 834px) {
   .services .tools .devTools .devTool .Express {
     height: 75px;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools .devTools .devTool .Express {
     height: 56px;
   }
 }
-
 .services .tools .devTools .devTool .Next {
   width: 85%;
   height: 90px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 @media (max-width: 1280px) {
   .services .tools .devTools .devTool .Next {
     max-width: 94%;
   }
 }
-
 @media (max-width: 834px) {
   .services .tools .devTools .devTool .Next {
     height: 75px;
   }
 }
-
 @media (max-width: 542px) {
   .services .tools .devTools .devTool .Next {
     height: 56px;
   }
 }
-
 .services .tools .devTools .devTool p {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -375,18 +312,15 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
-  color: #FFFF;
+  color: white;
 }
-
 @media (max-width: 542px) {
   .services .tools .devTools .devTool p {
     font-size: 14px;
   }
 }
-
 @media (max-width: 320px) {
   .services .tools .devTools .devTool p {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=services.module.css.map */

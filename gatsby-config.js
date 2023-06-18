@@ -31,6 +31,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {

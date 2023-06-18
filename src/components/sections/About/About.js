@@ -27,7 +27,8 @@ const About = (props) => {
                         development, graphic designing, and anything about technology, that’s why I decided to take Computer Science in University of 
                         the City of Manila (Pamantasan ng Lungsod ng Maynila). I also participated to different organizations including the PLM 
                         Computer Science Society as a Public Relations Officer & Creatives Committee Head, Algo Filipino as Development Committee Officer, 
-                        and Google Developer Student Clubs - PLM as Web Development Lead & Chief Technology Officer. 
+                        and Google Developer Student Clubs - PLM as Web Development Lead & Chief Technology Officer. Moreover, I worked as a Software Engineer 
+                        Intern at Dashlabs.ai and Software Engineer at GoMedia.
                         <br/><br/>
                         Working with you would be a great honor to me!</p>
 

@@ -6,82 +6,69 @@
   overflow: hidden;
   max-height: 1100px;
 }
-
 .heroSection .shade {
   width: 100vw;
   height: 100%;
   z-index: 1;
   position: absolute;
 }
-
 @media (max-width: 1024px) {
   .heroSection .shade {
     background: rgba(0, 0, 0, 0.4);
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .shade {
     background: rgba(0, 0, 0, 0.55);
   }
 }
-
 .heroSection .heroImage {
   height: 90%;
   position: absolute;
   bottom: 0px;
   right: 8%;
 }
-
 @media (max-width: 1440px) {
   .heroSection .heroImage {
     right: 1%;
   }
 }
-
 @media (max-width: 1280px) and (max-height: 725px) {
   .heroSection .heroImage {
     right: 2%;
   }
 }
-
 @media (max-width: 1030px) {
   .heroSection .heroImage {
     right: 3%;
   }
 }
-
 @media (max-width: 1030px) and (min-height: 850px) {
   .heroSection .heroImage {
     right: -8%;
   }
 }
-
 @media (max-width: 1030px) and (min-height: 1360px) {
   .heroSection .heroImage {
     right: -20%;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .heroImage {
     right: -16%;
     height: 92vh;
   }
 }
-
 @media (max-width: 768px) {
   .heroSection .heroImage {
     right: -20%;
   }
 }
-
 @media (max-width: 680px) {
   .heroSection .heroImage {
     right: -16%;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .heroImage {
     height: auto;
@@ -89,7 +76,6 @@
     width: 144vw;
   }
 }
-
 @media (max-width: 542px) and (max-height: 840px) {
   .heroSection .heroImage {
     height: auto;
@@ -97,7 +83,6 @@
     width: 136vw;
   }
 }
-
 @media (max-width: 542px) and (max-height: 780px) {
   .heroSection .heroImage {
     height: auto;
@@ -105,7 +90,6 @@
     width: 100vw;
   }
 }
-
 @media (max-width: 542px) and (max-height: 740px) {
   .heroSection .heroImage {
     height: auto;
@@ -113,7 +97,6 @@
     width: 116vw;
   }
 }
-
 @media (max-width: 285px) and (max-height: 655px) {
   .heroSection .heroImage {
     height: auto;
@@ -121,13 +104,10 @@
     width: 152vw;
   }
 }
-
 .heroSection .leftPart {
   margin: 0 auto;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: 200ms;
+  transform: translateY(-50%);
   transition: 200ms;
   position: absolute;
   height: auto;
@@ -136,37 +116,30 @@
   z-index: 2 !important;
   max-width: 85vw;
 }
-
 @media (max-width: 1440px) {
   .heroSection .leftPart {
     left: 8%;
   }
 }
-
 @media (max-width: 1280px) {
   .heroSection .leftPart {
     left: 10%;
   }
 }
-
 @media (max-width: 1024px) {
   .heroSection .leftPart {
     left: 12%;
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
+    transform: translateY(-30%);
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart {
     left: 10%;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     margin: auto;
     left: 0;
     right: 0;
@@ -176,7 +149,6 @@
     bottom: 10vh;
   }
 }
-
 @media (max-width: 414px) {
   .heroSection .leftPart {
     margin: auto;
@@ -188,207 +160,164 @@
     bottom: 10vh;
   }
 }
-
 .heroSection .leftPart h3 {
   color: #92D7FB;
   font-size: 36px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
-
 @media (max-width: 1280px) {
   .heroSection .leftPart h3 {
     font-size: 32px;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart h3 {
     font-size: 28px;
   }
 }
-
 @media (max-width: 768px) {
   .heroSection .leftPart h3 {
     font-size: 26px;
   }
 }
-
 @media (max-width: 680px) {
   .heroSection .leftPart h3 {
     font-size: 24px;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart h3 {
     font-size: 20px;
   }
 }
-
 @media (max-width: 414px) {
   .heroSection .leftPart h3 {
     font-size: 4vw;
   }
 }
-
 @media (min-width: 530px) and (max-height: 730px) {
   .heroSection .leftPart h3 {
     font-size: 18px;
   }
 }
-
 .heroSection .leftPart h1 {
   color: #92D7FB;
   font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-weight: 500;
 }
-
 @media (max-width: 1280px) {
   .heroSection .leftPart h1 {
     font-size: 56px;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart h1 {
     font-size: 52px;
   }
 }
-
 @media (max-width: 768px) {
   .heroSection .leftPart h1 {
     font-size: 48px;
   }
 }
-
 @media (max-width: 680px) {
   .heroSection .leftPart h1 {
     font-size: 40px;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart h1 {
     font-size: 42px;
   }
 }
-
 @media (min-width: 530px) and (max-height: 730px) {
   .heroSection .leftPart h1 {
     font-size: 36px;
   }
 }
-
 @media (max-width: 414px) {
   .heroSection .leftPart h1 {
     font-size: 8.6vw;
   }
 }
-
 .heroSection .leftPart h1 span {
   color: #FF986B;
 }
-
 .heroSection .leftPart .socialButtons {
   margin-top: 24px;
   width: 264px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart .socialButtons {
     margin: 30px auto 0 auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: auto;
   }
 }
-
 .heroSection .leftPart .socialButtons a {
   margin-right: 20px;
   display: block;
   margin: 0 auto;
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart .socialButtons a {
     margin: 0 10px;
     padding: 0;
   }
 }
-
 @media (min-width: 530px) and (max-height: 730px) {
   .heroSection .leftPart .socialButtons a {
     margin: 0 16px 0 0;
   }
 }
-
 @media (max-width: 285px) and (max-height: 655px) {
   .heroSection .leftPart .socialButtons a {
     margin: 0 8px;
   }
 }
-
 .heroSection .leftPart .socialButtons a img {
   height: 48px;
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart .socialButtons a img {
     height: 42px;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart .socialButtons a img {
     height: 36px;
   }
 }
-
 @media (max-width: 285px) and (max-height: 655px) {
   .heroSection .leftPart .socialButtons a img {
     height: 32px;
   }
 }
-
 .heroSection .leftPart .buttonContainer {
   margin-top: 36px;
   height: 48px;
 }
-
 @media (max-width: 1280px) {
   .heroSection .leftPart .buttonContainer {
     font-size: 30px;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart .buttonContainer {
     margin-top: 20px;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart .buttonContainer {
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
-
 .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
   height: 48px;
   width: 180px;
@@ -403,26 +332,22 @@
   text-align: center;
   vertical-align: middle;
 }
-
 @media (max-width: 1024px) {
   .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     height: 36px;
     width: 140px;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     font-size: 14px;
   }
 }
-
 @media (max-width: 542px) {
   .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     margin: 0 6px;
   }
 }
-
 @media (max-width: 414px) {
   .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     width: 40%;
@@ -432,24 +357,19 @@
     border-width: 2;
   }
 }
-
 @media (min-width: 530px) and (max-height: 730px) {
   .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
     font-size: 12px;
   }
 }
-
 .heroSection .leftPart .buttonContainer .seeMyWork {
   background: #FF986B;
   color: black;
-  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
-
 .heroSection .leftPart .buttonContainer .seeMyWork:hover {
   background: #ff7e46;
 }
-
 .heroSection .leftPart .buttonContainer .getMyResume {
   border-style: solid;
   border-width: 3px;
@@ -460,31 +380,22 @@
   line-height: 2.8em;
   text-decoration: none;
   vertical-align: middle;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
-
 @media (max-width: 1024px) {
   .heroSection .leftPart .buttonContainer .getMyResume {
     line-height: 2.3em;
   }
 }
-
 @media (max-width: 414px) {
   .heroSection .leftPart .buttonContainer .getMyResume {
     line-height: 2.5em;
   }
 }
-
 @media (max-width: 834px) {
   .heroSection .leftPart .buttonContainer .getMyResume {
     border-width: 2px;
   }
 }
-/*# sourceMappingURL=hero.module.css.map */
