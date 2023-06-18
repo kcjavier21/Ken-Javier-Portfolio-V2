@@ -1,15 +1,9 @@
 import React, { useState } from "react"
-import * as styles from "../styles/css/testimonials.module.css"
+import * as styles from "./styles/css/testimonials.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-import fieldworkStudio from "../../../../assets/images/jpg-png/FieldworkStudio.png"
-import algoFilipino from "../../../../assets/images/jpg-png/AlgoFilipino.png"
-import gdsc from "../../../../assets/images/jpg-png/GDSC.png"
-import plmcss from "../../../../assets/images/jpg-png/PLM CSS.png"
-import matrix from "../../../../assets/images/jpg-png/Matrix-Co.png"
-import dashlabs from "../../../../assets/images/jpg-png/DashlabsAI.png"
-import goMedia from "../../../../assets/images/svg/GoMedia.svg"
+import { organizations } from '../../../assets/data/organizations';
 
 const query = graphql`
   {
@@ -35,28 +29,6 @@ const Testimonials = props => {
   const nodes = data.allContentfulTestimonials.nodes
 
   let [slideNumber, setSlideNumber] = useState(0)
-
-  const organizations = [
-    { name: "Algo Filipino", image: algoFilipino, className: "algoFilipino" },
-    { name: "Fieldwork Studio", image: fieldworkStudio, className: "fieldworkStudio" },
-    {
-      name: "Google Developer Students Club - Pamantasan ng Lungsod ng Maynila",
-      image: gdsc,
-      className: "gdsc",
-    },
-    { name: "Dashlabs.ai", image: dashlabs, className: "dashlabs" },
-    {
-      name: "GoMedia",
-      image: goMedia,
-      className: "gomedia",
-    },
-    {
-      name: "PLM Computer Science Society",
-      image: plmcss,
-      className: "plmcss",
-    },
-    { name: "Matrix Co.", image: matrix, className: "matrix" },
-  ]
 
   // ==== Functions for Side solutions =====
   const noMoreClicking = () => {
@@ -219,7 +191,7 @@ const Testimonials = props => {
         {organizations.map(item => (
           <div className={styles.organization} key={item.name}>
             <img
-              src={item.image}
+              src={item.image.default}
               alt={item.name}
               className={styles[item.className]}
             />

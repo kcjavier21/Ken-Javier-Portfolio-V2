@@ -45,8 +45,5 @@ const basicContactDetails = [
     { name: "Email", image: email, details: "kcdjavier@gmail.com" },
 ]
 
-
-
-
 module.exports.socialMediaLinks = socialMediaLinks;
 module.exports.basicContactDetails = basicContactDetails;

@@ -10,11 +10,11 @@ import "../assets/styles/css/all.min.css"
 import "../assets/styles/css/fontawesome.min.css"
 
 // ==== SECTIONS =====
-import Hero from "../components/sections/Hero/Hero.js"
-import About from "../components/sections/About/About.js"
-import Services from "../components/sections/Services/Services.js"
-import Projects from "../components/sections/Projects/Projects.js"
-import Contact from "../components/sections/Contact/Contact.js"
+import Hero from "../components/sections/Hero"
+import About from "../components/sections/About"
+import Services from "../components/sections/Services"
+import Projects from "../components/sections/Projects"
+import Contact from "../components/sections/Contact"
 
 export default function Home() {
   let [innerWidth, setInnerWidth] = useState(768)
