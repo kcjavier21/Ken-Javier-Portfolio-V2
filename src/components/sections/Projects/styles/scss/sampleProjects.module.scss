@@ -3,7 +3,6 @@
 
 .sampleProjects {
   ////@include add-testing-border;
-  //height: 85vh;
   background: $blue;
   background-position: center;
   position: relative;
@@ -32,8 +31,8 @@
     }
   }
 
-  .projectSlideShowContainer {
-    //@include add-testing-border;
+  .projectCarousel {
+    // @include add-outline;
     border-color: $light-blue;
     width: 1296px;
     height: 460px;
@@ -72,7 +71,7 @@
       height: 440px;
     }
 
-    .projectSlideShow {
+    .projectCarouselContent {
       //@include add-testing-border;
       @include absolutely-centered;
       border-color: red;
@@ -116,24 +115,10 @@
         @include large-mobile {
           height: 100%;
           grid-template-rows: 43% 50%;
-          //grid-template-columns: repeat(3, 100%);
         }
 
-        // @include mobile {
-        //     grid-template-rows: 45% 53%;
-        //     grid-template-columns: repeat(3, 100%);
-        // }
-
         .description {
-          //@include add-testing-border;
-          //height: 98%;
           text-align: left;
-          //padding: 36px 24px;
-
-          // @include small-tablet {
-          //     height:
-          //     //grid-template-columns: repeat(3, 100%);
-          // }
 
           h1 {
             //@include add-testing-border;
@@ -153,10 +138,6 @@
             @include iPad-pro-11 {
               font-size: 24px
             }
-
-            // @include iPad-mini {
-            //     font-size: 20px;
-            // }
 
             @include small-tablet {
               margin-top: 8px;
@@ -184,17 +165,9 @@
               font-size: 15px;
             }
 
-            // @include iPad-pro-12 {
-            //     margin-top: 16px;
-            // }
-
             @include iPad-pro-11 {
               font-size: 14px;
             }
-
-            // @include iPad-mini {
-            //     font-size: 12px;
-            // }
 
             @include small-tablet {
               margin-top: 12px;
@@ -212,14 +185,10 @@
         }
 
         .imageSection {
-          //@include add-testing-border;
-          //height: 98%;
           width: 98%;
 
           .projImage {
-            //@include add-testing-border;
             height: 100%;
-            //gridwidth: 98%;
             border-radius: 16px;
 
             @include small-tablet {
@@ -254,16 +223,11 @@
         margin: 0 auto;
         top: 20%;
         transform: translateY(0%);
-        //transition: 200ms;
       }
 
       @include mobile {
         font-size: 20px;
       }
-
-      // @include small-tablet {
-      //     margin-top: 20px;
-      // }
 
       &:hover {
         color: #5f95b1;
@@ -279,8 +243,6 @@
     }
 
     .slideBeads {
-      //@include add-testing-border;
-      //background-color: rgb(45, 255, 87);
       position: absolute;
       bottom: 0px;
       left: 5%;

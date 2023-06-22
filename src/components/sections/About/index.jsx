@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+// @ts-ignore
 import * as styles from "./styles/css/about.module.css"
 
 const About = props => {

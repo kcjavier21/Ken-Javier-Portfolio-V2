@@ -1,9 +1,11 @@
 import React, { Component } from "react"
-import * as styles from "./styles/css/contact.module.css"
 import { toast } from "react-toastify"
 import Joi from "joi-browser"
 import "../../../../node_modules/react-toastify/dist/ReactToastify.css"
 import emailjs from "emailjs-com"
+
+// @ts-ignore
+import * as styles from "./styles/css/contact.module.css"
 
 // ======= DATA ========
 import {

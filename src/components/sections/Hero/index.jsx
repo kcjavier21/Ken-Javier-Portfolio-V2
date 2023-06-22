@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import * as styles from "./styles/css/hero.module.css"
-import myPhoto from "../../../assets/images/jpg-png/Me Edited w Shadow.png"
 import { socialMediaLinks } from "../../../assets/data/socialMediaLinks"
+
+// @ts-ignore
+import * as styles from "./styles/css/hero.module.css"
+// @ts-ignore
+import myPhoto from "../../../assets/images/jpg-png/Me Edited w Shadow.png"
+// @ts-ignore
 import resume from "../../../assets/data/KenJavierResume2023.pdf"
 
 const Hero = () => {

@@ -28,7 +28,7 @@
     font-size: 24px;
   }
 }
-.sampleProjects .projectSlideShowContainer {
+.sampleProjects .projectCarousel {
   border-color: #92D7FB;
   width: 1296px;
   height: 460px;
@@ -37,23 +37,23 @@
   max-width: 80%;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer {
+  .sampleProjects .projectCarousel {
     height: 416px;
   }
 }
 @media (max-width: 1030px) {
-  .sampleProjects .projectSlideShowContainer {
+  .sampleProjects .projectCarousel {
     height: 392px;
   }
 }
 @media (max-width: 834px) {
-  .sampleProjects .projectSlideShowContainer {
+  .sampleProjects .projectCarousel {
     height: 350px;
     max-width: 90%;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer {
+  .sampleProjects .projectCarousel {
     grid-template-columns: auto;
     grid-template-rows: 49% 49%;
     height: 400px;
@@ -62,12 +62,12 @@
   }
 }
 @media (max-width: 320px) {
-  .sampleProjects .projectSlideShowContainer {
+  .sampleProjects .projectCarousel {
     max-width: 90%;
     height: 440px;
   }
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow {
+.sampleProjects .projectCarousel .projectCarouselContent {
   margin: auto;
   left: 0;
   right: 0;
@@ -82,17 +82,17 @@
   max-width: 90%;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow {
+  .sampleProjects .projectCarousel .projectCarouselContent {
     height: 90%;
     width: 80%;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow {
+  .sampleProjects .projectCarousel .projectCarouselContent {
     height: 90%;
   }
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide {
   border-color: lightgreen;
   height: 100%;
   margin: 0 auto;
@@ -102,7 +102,7 @@
   transition: 300ms ease-in-out;
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide {
     grid-template-columns: auto;
     grid-template-rows: 50% 43%;
     height: 85%;
@@ -110,48 +110,48 @@
   }
 }
 @media (max-width: 542px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide {
     height: 100%;
     grid-template-rows: 43% 50%;
   }
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description {
   text-align: left;
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 {
   font-size: 36px;
   text-align: left;
   width: 98%;
   margin-top: 36px;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 {
     font-size: 32px;
   }
 }
 @media (max-width: 1030px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 {
     margin-top: 16px;
   }
 }
 @media (max-width: 834px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 {
     font-size: 24px;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 {
     margin-top: 8px;
     font-size: 20px;
     margin: 0 auto;
   }
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description h1 a {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description h1 a {
   text-decoration: none;
   color: #92D7FB;
   cursor: pointer;
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
   font-size: 20px;
   color: white;
   width: 98%;
@@ -159,50 +159,50 @@
   margin: 32px 24px 0 0;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
     font-size: 15px;
   }
 }
 @media (max-width: 834px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
     font-size: 14px;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
     margin-top: 12px;
     margin: 8px auto 0 auto;
   }
 }
 @media (max-width: 542px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
     font-size: 12px;
   }
 }
 @media (max-width: 414px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .description p {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .description p {
     font-size: 11px;
   }
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .imageSection {
   width: 98%;
 }
-.sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+.sampleProjects .projectCarousel .projectCarouselContent .projectSlide .imageSection .projImage {
   height: 100%;
   border-radius: 16px;
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .imageSection .projImage {
     width: 232px;
     max-width: 98%;
   }
 }
 @media (max-width: 414px) {
-  .sampleProjects .projectSlideShowContainer .projectSlideShow .projectSlide .imageSection .projImage {
+  .sampleProjects .projectCarousel .projectCarouselContent .projectSlide .imageSection .projImage {
     width: auto;
   }
 }
-.sampleProjects .projectSlideShowContainer i {
+.sampleProjects .projectCarousel i {
   color: #92D7FB;
   position: absolute;
   margin: 0 auto;
@@ -213,37 +213,37 @@
   cursor: pointer;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer i {
+  .sampleProjects .projectCarousel i {
     font-size: 28px;
   }
 }
 @media (max-width: 834px) {
-  .sampleProjects .projectSlideShowContainer i {
+  .sampleProjects .projectCarousel i {
     font-size: 24px;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer i {
+  .sampleProjects .projectCarousel i {
     margin: 0 auto;
     top: 20%;
     transform: translateY(0%);
   }
 }
 @media (max-width: 414px) {
-  .sampleProjects .projectSlideShowContainer i {
+  .sampleProjects .projectCarousel i {
     font-size: 20px;
   }
 }
-.sampleProjects .projectSlideShowContainer i:hover {
+.sampleProjects .projectCarousel i:hover {
   color: #5f95b1;
 }
-.sampleProjects .projectSlideShowContainer .left {
+.sampleProjects .projectCarousel .left {
   left: 0px;
 }
-.sampleProjects .projectSlideShowContainer .right {
+.sampleProjects .projectCarousel .right {
   right: 0px;
 }
-.sampleProjects .projectSlideShowContainer .slideBeads {
+.sampleProjects .projectCarousel .slideBeads {
   position: absolute;
   bottom: 0px;
   left: 5%;
@@ -252,17 +252,17 @@
   flex-direction: row;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectCarousel .slideBeads {
     left: 10%;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectCarousel .slideBeads {
     left: 5%;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads {
+  .sampleProjects .projectCarousel .slideBeads {
     margin: auto;
     left: 0;
     right: 0;
@@ -273,7 +273,7 @@
     justify-content: center;
   }
 }
-.sampleProjects .projectSlideShowContainer .slideBeads span {
+.sampleProjects .projectCarousel .slideBeads span {
   height: 20px;
   width: 20px;
   background-color: white;
@@ -282,34 +282,34 @@
   transition: 300ms ease-in-out;
 }
 @media (max-width: 1280px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectCarousel .slideBeads span {
     height: 18px;
     width: 18px;
   }
 }
 @media (max-width: 1024px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectCarousel .slideBeads span {
     height: 16px;
     width: 16px;
   }
 }
 @media (max-width: 680px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectCarousel .slideBeads span {
     margin: 0 6px;
   }
 }
 @media (max-width: 414px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectCarousel .slideBeads span {
     height: 14px;
     width: 14px;
   }
 }
 @media (max-width: 320px) {
-  .sampleProjects .projectSlideShowContainer .slideBeads span {
+  .sampleProjects .projectCarousel .slideBeads span {
     height: 10px;
     width: 10px;
   }
 }
-.sampleProjects .projectSlideShowContainer .slideBeads span.active {
+.sampleProjects .projectCarousel .slideBeads span.active {
   background-color: gray;
 }
