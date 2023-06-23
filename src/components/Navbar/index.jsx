@@ -45,22 +45,18 @@ const Navbar = props => {
 
   return (
     <div>
-      <LargeNavbar 
+      <LargeNavbar
         scrollPosition={scrollPosition}
         innerWidth={props.innerWidth}
         navMenu={navMenu}
         burgerMenuClass={burgerMenuClass}
         getToggleNavbarClass={getToggleNavbarClass}
       />
-      {props.innerWidth <= 768 ? (
-        <ToggleNavbar
-          toggleNavbarIsActive={toggleNavbarIsActive}
-          getToggleNavbarClass={getToggleNavbarClass}
-          navMenu={navMenu}
-        />
-      ) : (
-        <></>
-      )}
+      <ToggleNavbar
+        toggleNavbarIsActive={toggleNavbarIsActive}
+        getToggleNavbarClass={getToggleNavbarClass}
+        navMenu={navMenu}
+      />
     </div>
   )
 }

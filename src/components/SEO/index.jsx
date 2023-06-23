@@ -1,6 +1,8 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import thumbnail from "../assets/images/jpg-png/thumbnail.png"
+import React from 'react'
+import { Helmet } from 'react-helmet'
+
+// @ts-ignore
+import thumbnail from '../../assets/images/jpg-png/thumbnail.png'
 
 const SEO = () => {
   return (
@@ -9,7 +11,7 @@ const SEO = () => {
       meta={[
         {
           property: `og:title`,
-          content: "Ken Javier",
+          content: 'Ken Javier',
         },
         {
           property: `og:type`,
