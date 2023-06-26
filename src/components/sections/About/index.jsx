@@ -3,12 +3,12 @@ import { StaticImage } from "gatsby-plugin-image"
 // @ts-ignore
 import * as styles from "./styles/css/about.module.css"
 
-const About = props => {
+const About = () => {
   return (
     <main className={styles.about}>
       <section className={styles.writing}>
         <div className={styles.imageSection}>
-          {props.innerWidth <= 768 ? <h1>About Me</h1> : <></>}
+          <h1>About Me</h1>
 
           <StaticImage
             src="../../../assets/images/jpg-png/1.jpg"
@@ -20,7 +20,7 @@ const About = props => {
         </div>
 
         <div className={styles.paragraphSection}>
-          {props.innerWidth > 768 ? <h1>About Me</h1> : <></>}
+          <h1>About Me</h1>
 
           <p>
             Hi I’m Ken Javier, a Philippine-based full-stack web developer and

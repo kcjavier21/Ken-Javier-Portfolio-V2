@@ -1,7 +1,7 @@
 .navbar {
   height: 80px;
   width: 100vw;
-  background: #101E25;
+  background: #101e25;
   color: white;
   z-index: 0;
   position: fixed;
@@ -72,6 +72,7 @@
   }
 }
 .navbar .nav-contents .nav-links {
+  outline: 1px solid green;
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);

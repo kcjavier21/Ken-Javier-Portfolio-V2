@@ -166,6 +166,19 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
+@media (max-width: 542px) {
+  .heroSection .leftPart h3:first-child {
+    display: none;
+  }
+}
+.heroSection .leftPart h3:nth-child(2) {
+  display: none;
+}
+@media (max-width: 542px) {
+  .heroSection .leftPart h3:nth-child(2) {
+    display: block;
+  }
+}
 @media (max-width: 1280px) {
   .heroSection .leftPart h3 {
     font-size: 32px;
@@ -206,6 +219,19 @@
   font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-weight: 500;
+}
+@media (max-width: 542px) {
+  .heroSection .leftPart h1:nth-child(3) {
+    display: none;
+  }
+}
+.heroSection .leftPart h1:nth-child(4) {
+  display: none;
+}
+@media (max-width: 542px) {
+  .heroSection .leftPart h1:nth-child(4) {
+    display: block;
+  }
 }
 @media (max-width: 1280px) {
   .heroSection .leftPart h1 {
@@ -318,7 +344,8 @@
     justify-content: center;
   }
 }
-.heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+.heroSection .leftPart .buttonContainer button,
+.heroSection .leftPart .buttonContainer a {
   height: 48px;
   width: 180px;
   font-family: "Poppins", sans-serif;
@@ -333,23 +360,27 @@
   vertical-align: middle;
 }
 @media (max-width: 1024px) {
-  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+  .heroSection .leftPart .buttonContainer button,
+  .heroSection .leftPart .buttonContainer a {
     height: 36px;
     width: 140px;
   }
 }
 @media (max-width: 834px) {
-  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+  .heroSection .leftPart .buttonContainer button,
+  .heroSection .leftPart .buttonContainer a {
     font-size: 14px;
   }
 }
 @media (max-width: 542px) {
-  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+  .heroSection .leftPart .buttonContainer button,
+  .heroSection .leftPart .buttonContainer a {
     margin: 0 6px;
   }
 }
 @media (max-width: 414px) {
-  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+  .heroSection .leftPart .buttonContainer button,
+  .heroSection .leftPart .buttonContainer a {
     width: 40%;
     height: 9.2vw;
     font-size: 3.2vw;
@@ -358,7 +389,8 @@
   }
 }
 @media (min-width: 530px) and (max-height: 730px) {
-  .heroSection .leftPart .buttonContainer button, .heroSection .leftPart .buttonContainer a {
+  .heroSection .leftPart .buttonContainer button,
+  .heroSection .leftPart .buttonContainer a {
     font-size: 12px;
   }
 }
@@ -375,7 +407,7 @@
   border-width: 3px;
   border-color: #FF986B;
   border-radius: auto;
-  background: #0F0F0F;
+  background: #0f0f0f;
   color: #FF986B;
   line-height: 2.8em;
   text-decoration: none;

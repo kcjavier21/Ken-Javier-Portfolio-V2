@@ -6,12 +6,13 @@ import logo from '../../assets/images/svg/Personal Logo Two - Colored 3 (Landsca
 
 const LargeNavbar = ({
   scrollPosition,
-  innerWidth,
   navMenu,
   burgerMenuClass,
   getToggleNavbarClass,
 }) => {
   let activeStyle = scrollPosition > 0.05 ? 'active' : ''
+
+  console.log(burgerMenuClass)
 
   return (
     <nav className={`navbar ${activeStyle}`}>
@@ -19,25 +20,25 @@ const LargeNavbar = ({
         <img src={logo} alt="Ken Javier's Logo" />
 
         <ul className="nav-links">
-          {innerWidth > 768 ? (
-            navMenu.map(item => (
-              <li
-                role="presentation"
-                key={item}
-                // @ts-ignore
-                onClick={() => scrollTo(`#${item}`)}
-              >
-                {item}
-              </li>
-            ))
-          ) : (
-            <i
+          {navMenu.map(item => (
+            <li
               role="presentation"
-              onClick={() => getToggleNavbarClass()}
-              className={`fas fa-bars ${burgerMenuClass}`}
-            />
-          )}
+              key={item}
+              // @ts-ignore
+              onClick={() => scrollTo(`#${item}`)}
+            >
+              {item}
+            </li>
+          ))}
+
+<i
+          role="presentation"
+          onClick={() => getToggleNavbarClass()}
+          className={`fas fa-bars ${burgerMenuClass}`}
+        />
         </ul>
+
+        
       </div>
     </nav>
   )

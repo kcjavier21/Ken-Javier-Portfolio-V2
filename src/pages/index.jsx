@@ -56,7 +56,7 @@ export default function Home() {
 
   const renderMainContent = () => {
     return (
-      <Layout innerWidth={innerWidth}>
+      <Layout>
         <div id="home" >
           <Hero />
         </div>

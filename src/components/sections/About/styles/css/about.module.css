@@ -143,11 +143,17 @@
   color: #FF986B;
   margin-top: 3%;
   text-align: center;
+  display: none;
 }
 @media (max-width: 1030px) and (min-height: 1350px) {
   .writing .imageSection h1 {
     margin-bottom: 12px;
     font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .writing .imageSection h1 {
+    display: block;
   }
 }
 @media (min-width: 530px) and (max-height: 730px) {
@@ -205,10 +211,16 @@
   font-size: 36px;
   color: #FF986B;
   margin-top: 3%;
+  display: block;
 }
 @media (max-width: 1030px) and (min-height: 1350px) {
   .writing .paragraphSection h1 {
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .writing .paragraphSection h1 {
+    display: none;
   }
 }
 .writing .paragraphSection p {

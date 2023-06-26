@@ -2,269 +2,254 @@
 @import '../../../../../assets/styles/scss/variables';
 
 .about {
-    //@include add-testing-border;
-    height: 85vh;
-    background: $blue;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    max-height: 900px;
+  //@include add-testing-border;
+  height: 85vh;
+  background: $blue;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  max-height: 900px;
 
-    @include iPad-pro-12 {
-        @media(min-height: 1350px) {
-            height: 60vh;
-        }
+  @include iPad-pro-12 {
+    @media (min-height: 1350px) {
+      height: 60vh;
+    }
+  }
+
+  @include medium {
+    height: 72vh;
+  }
+
+  @include iPad-mini {
+    height: 80vh;
+  }
+
+  @include large-mobile {
+    height: 100vh;
+  }
+
+  @include mobile {
+    height: 90vh;
+
+    @media (max-height: 650px) {
+      height: 128vh;
     }
 
-    @include medium {
-        height: 72vh;
+    @media (min-height: 660px) {
+      height: 116vh;
+    }
+
+    @media (min-height: 720px) {
+      height: 100vh;
+    }
+
+    @media (min-height: 800px) {
+      height: 92vh;
+    }
+  }
+
+  @include small-mobile {
+    height: 132vh;
+  }
+
+  @include surface-duo {
+    height: 96vh;
+  }
+
+  @include galaxy-fold {
+    height: 120vh;
+  }
+}
+
+.writing {
+  //@include add-testing-border;
+  @include absolutely-centered;
+  @include vertically-centered;
+  //height: 420px;
+  width: 950px;
+  max-width: 80%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1.2fr 2.8fr;
+  grid-gap: 2vw;
+
+  @include iPad-pro-12 {
+    @media (min-height: 1350px) {
+      grid-template-columns: auto;
+      grid-template-rows: auto 1.2fr;
+      max-width: 70%;
+    }
+  }
+
+  @include iPad-pro-11 {
+    grid-template-columns: 265px 2fr;
+    max-width: 88%;
+  }
+
+  @include iPad-mini {
+    grid-template-columns: auto;
+    grid-template-rows: auto 1.2fr;
+    max-width: 76%;
+  }
+
+  .imageSection {
+    height: 417px;
+    width: 100%;
+    //@include add-testing-border;
+
+    @include iPad-pro-12 {
+      @media (min-height: 1350px) {
+        width: 240px;
+        height: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
     }
 
     @include iPad-mini {
-        height: 80vh;
-    }
+      width: 240px;
+      height: 100%;
+      margin: 0 auto;
 
-
-    @include large-mobile {
-        height: 100vh;
+      max-width: 84%;
     }
 
     @include mobile {
-        height: 90vh;
-
-        @media(max-height: 650px) {
-            height: 128vh;
-        }
-
-        @media(min-height: 660px) {
-            height: 116vh;
-        }
-
-         @media(min-height: 720px) {
-            height: 100vh;
-        }
-
-        @media(min-height: 800px) {
-            height: 92vh;
-        }
-    }
-
-    @include small-mobile {
-        height: 132vh;
+      width: 180px;
     }
 
     @include surface-duo {
-        height: 96vh;
-     }
+      width: 240px;
+      height: 90%;
+      margin: 0 auto;
 
-     @include galaxy-fold {
-        height: 120vh;
+      max-width: 84%;
     }
 
+    h1 {
+      //@include add-testing-border;
+      font-family: $main-font;
+      font-size: 36px;
+      color: $orange;
+      margin-top: 3%;
+      text-align: center;
+      display: none;
+
+      @include iPad-pro-12 {
+        @media (min-height: 1350px) {
+          margin-bottom: 12px;
+          font-size: 40px;
+        }
+      }
+
+      @include iPad-mini {
+        display: block;
+      }
+
+      @include surface-duo {
+        font-size: 32px;
+      }
+
+      @include large-mobile {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .myImage {
+      height: 100%;
+    }
+  }
+
+  .paragraphSection {
+    text-align: left;
+
+    @include iPad-pro-12 {
+      @media (min-height: 1350px) {
+        margin-top: 0px;
+      }
+    }
+
+    @include iPad-pro-11 {
+      font-size: 14px;
+      margin-top: 24px;
+    }
+
+    @include iPad-mini {
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    @include small-mobile {
+      font-size: 11px;
+    }
+
+    h1 {
+      //@include add-testing-border;
+      font-family: $main-font;
+      font-size: 36px;
+      color: $orange;
+      margin-top: 3%;
+      display: block;
+
+      @include iPad-pro-12 {
+        @media (min-height: 1350px) {
+          text-align: center;
+        }
+      }
+
+      @include iPad-mini {
+        display: none;
+      }
+    }
+
+    p {
+      //@include add-testing-border;
+      font-family: $secondary-font;
+      color: #ffff;
+      margin-top: 5%;
+      line-height: 1.6em;
+
+      @include medium {
+        @media (max-height: 750px) {
+          font-size: 14px;
+        }
+      }
+
+      @include iPad-pro-12 {
+        @media (min-height: 1350px) {
+          margin-top: 3%;
+        }
+      }
+
+      @include iPad-pro-11 {
+        font-size: 14px;
+      }
+
+      @include iPad-mini {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        font-size: 12px;
+      }
+
+      @include small-mobile {
+        font-size: 11px;
+      }
+
+      @include surface-duo {
+        font-size: 12px;
+      }
+    }
+  }
 }
-
-
-    .writing {
-        //@include add-testing-border;
-        @include absolutely-centered;
-        @include vertically-centered;
-        //height: 420px;
-        width: 950px;
-        max-width: 80%;
-        position: absolute;
-        display: grid;
-        grid-template-columns: 1.2fr 2.8fr;
-        grid-gap: 2vw;
-
-        @include iPad-pro-12 {
-
-            @media(min-height: 1350px) {
-                grid-template-columns: auto;
-                grid-template-rows: auto 1.2fr;
-                max-width: 70%;
-            }
-        }
-
-        @include iPad-pro-11 {
-            grid-template-columns: 265px 2fr;
-            max-width: 88%;
-        }
-
-        @include iPad-mini{
-            grid-template-columns: auto;
-            grid-template-rows: auto 1.2fr;
-            max-width: 76%;
-        }
-
-
-        .imageSection {
-            height: 417px;
-            width: 100%;
-            //@include add-testing-border;
-
-            @include iPad-pro-12 {
-
-                @media(min-height: 1350px) {
-                    width: 240px;
-                    height: 100%;
-                    max-width: 80%;
-                    margin: 0 auto;
-                }
-            }
-
-
-
-            @include iPad-mini{
-                width: 240px;
-                height: 100%;
-                margin: 0 auto;
-
-                max-width: 84%;
-            }
-
-            @include mobile {
-                width: 180px;
-            }
-
-
-            @include surface-duo {
-                width: 240px;
-                height: 90%;
-                margin: 0 auto;
-
-                max-width: 84%;
-            }
-            
-            h1 {
-                //@include add-testing-border;
-                font-family: $main-font;
-                font-size: 36px;
-                color: $orange;
-                margin-top: 3%;
-                text-align: center;
-
-
-                @include iPad-pro-12 {
-
-                    @media(min-height: 1350px) {
-                        margin-bottom: 12px;
-                        font-size: 40px;
-                    }
-                }
-
-                @include surface-duo {
-                    font-size: 32px;
-                }
-    
-
-                @include large-mobile {
-                    font-size: 28px;
-                    margin-bottom: 8px;
-                }
-
-                @include mobile {
-                    font-size: 24px;
-                    margin-bottom: 12px;
-                }
-            }
-
-            .myImage {
-                height: 100%;
-            }
-
-
-
-            
-        }
-
-        .paragraphSection {
-            text-align: left;
-
-            @include iPad-pro-12 {
-
-                @media(min-height: 1350px) {
-                    margin-top: 0px;
-                }
-            }
-
-            @include iPad-pro-11 {
-                font-size: 14px;
-                margin-top: 24px;
-             }
-
-
-             @include iPad-mini {
-                font-size: 14px;
-                margin-top: 40px;
-             }
-
-
-             @include mobile {
-                 font-size: 12px;
-             }
-
-             @include small-mobile {
-                 font-size: 11px;
-             }
-
-            h1 {
-                //@include add-testing-border;
-                font-family: $main-font;
-                font-size: 36px;
-                color: $orange;
-                margin-top: 3%;
-
-
-                @include iPad-pro-12 {
-                    @media(min-height: 1350px) {
-                        text-align: center;
-                    }
-                }
-
-                
-            }
-
-            p {
-                //@include add-testing-border;
-                font-family: $secondary-font;
-                color: #FFFF;
-                margin-top: 5%;
-                line-height: 1.6em;
-
-                @include medium {
-                    @media(max-height: 750px) {
-                        font-size: 14px;
-                    }
-                }
-
-                @include iPad-pro-12 {
-
-                    @media(min-height: 1350px) {
-                        margin-top: 3%;
-                    }
-                }
-
-                @include iPad-pro-11 {
-                    font-size: 14px;
-                 }
-    
-    
-                 @include iPad-mini {
-                    font-size: 14px;
-                 }
-    
-    
-                 @include mobile {
-                     font-size: 12px;
-                 }
-    
-                 @include small-mobile {
-                     font-size: 11px;
-                 }
-
-                 @include surface-duo {
-                     font-size: 12px;
-                 }
-            }
-        }
-    }

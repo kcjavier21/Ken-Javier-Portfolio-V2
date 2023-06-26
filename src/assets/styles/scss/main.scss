@@ -83,7 +83,7 @@ h5 {
     }
 
     .nav-links {
-      //@include add-testing-border;
+      // @include add-outline;
       @include vertically-centered;
       border-color: white;
       color: white;
@@ -97,9 +97,14 @@ h5 {
       i {
         font-size: 28px;
         transition: 300ms ease-in-out;
+        display: none;
 
         &.active {
           color: $orange;
+        }
+
+        @include iPad-mini {
+          display: block;
         }
 
         @include mobile {
@@ -130,8 +135,14 @@ h5 {
           width: 82px;
           margin: 0 0px 0 12px;
         }
+
+        @include iPad-mini {
+          display: none;
+        }
       }
     }
+
+    
   }
 }
 

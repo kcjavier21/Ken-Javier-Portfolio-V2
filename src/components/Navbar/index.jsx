@@ -5,7 +5,7 @@ import '../../assets/styles/css/main.css'
 import '../../assets/styles/css/all.min.css'
 import '../../assets/styles/css/fontawesome.min.css'
 
-const Navbar = props => {
+const Navbar = () => {
   let [scrollPosition, setScrollPosition] = useState(0)
   let [toggleNavbarIsActive, setToggleNavbarIsActive] = useState(false)
   let [burgerMenuIsActive, setBurgerMenuIsActive] = useState(false)
@@ -47,7 +47,6 @@ const Navbar = props => {
     <div>
       <LargeNavbar
         scrollPosition={scrollPosition}
-        innerWidth={props.innerWidth}
         navMenu={navMenu}
         burgerMenuClass={burgerMenuClass}
         getToggleNavbarClass={getToggleNavbarClass}
