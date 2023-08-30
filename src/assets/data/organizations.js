@@ -29,7 +29,6 @@ const organizations = [
     image: plmcss,
     className: "plmcss",
   },
-  { name: "Matrix Co.", image: matrix, className: "matrix" },
 ]
 
 module.exports.organizations = organizations
